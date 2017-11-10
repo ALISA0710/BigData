@@ -1,6 +1,15 @@
-.a{
-	text-align: center;
+.nav {
+    font-size: 0.2rem;
+    display: -webkit-flex;
+    /* Safari */
+    display: flex;
+    width: 100%;
+    text-align: center;
 }
-.a{
-	text-align: center;
+
+.nav>div {
+    flex-direction: column;
+    width: 16.3%;
+    height: 0.5rem;
+    line-height: 0.5rem;
 }
