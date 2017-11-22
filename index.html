@@ -61,22 +61,42 @@
 </head>
 
 <body>
+	<nav>1</nav>
 	<!--1.顶部-->
-	<header>
-		<div class="nav">
-			<div>1</div>
-			<div>2</div>
-			<div>3</div>
-			<div>4</div>
-			<div>5</div>
-			<div>6</div>
-		</div>
-	</header>
-	<!--2.主体-->
-	<section></section>
-	<!--3.尾部-->
-	<footer></footer>
-
+	<div class="container">
+		<header>
+			<div class="nav">
+				<div>1</div>
+				<div>彩</div>
+				<div>云</div>
+				<div>就</div>
+				<div>是</div>
+				<div>那</div>
+			</div>
+		</header>
+		<!--2.主体-->
+		<section>
+			<div class="nav">
+				<div>2</div>
+				<div>咪</div>
+				<div>咪</div>
+				<div>就</div>
+				<div>是</div>
+				<div>那</div>
+			</div>
+		</section>
+		<!--3.尾部-->
+		<footer>
+			<div class="nav">
+				<div>3</div>
+				<div>云</div>
+				<div>磊</div>
+				<div>就</div>
+				<div>是</div>
+				<div>那</div>
+			</div>
+		</footer>
+	</div>
 	<!--script-->
 	<!--1.reset.js引在jQuery之前，HTMLfont-size不用设置100px,其余全部用rem，宽高定死-->
 	<script type="text/javascript" src="js/reset.js"></script>
@@ -87,8 +107,14 @@
 	<!--4.移动端自适应-->
 	<!--<script type="text/javascript" src="js/base.js"></script>-->
 	<script type="text/javascript">
-		$(".nav").click(function(event) {
+		$(".container").click(function(event) {
 			/* Act on the event */
+			$(this).hide();
+			$("body").click(function(event) {
+				/* Act on the event */
+				$(".container").show();
+				
+			});
 		});
 	</script>
 </body>
