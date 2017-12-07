@@ -6,7 +6,13 @@
 .film-online-box,
 .film-offline-box,
 .film-grade,
-.film-star{
+.film-star,
+.map-container,
+.film-charts-box,
+.film-name,
+.name-all,
+.time-all,
+.film-charts-tab{
   display: -webkit-flex;
   /* Safari */
   display: flex;
@@ -14,14 +20,20 @@
 
 .swiper-slide,
 .film-grade,
-.film-star {
+.film-star,
+.map-container,
+.film-name,
+.name-all,
+.time-all,
+.film-charts-tab {
   flex-direction: row;
 }
 
 .film-box,
 .film-charts-box,
 .film-online-box,
-.film-offline-box {
+.film-offline-box,
+.film-charts-box{
   flex-direction: column;
 }
 
@@ -32,11 +44,10 @@
 /* 1 header style start! */
 
 .title {
-  width: 79%;
+  width: 80%;
   height: 10%;
   line-height: 1.2rem;
   margin: 0 auto;
-  margin-bottom: 0.35rem;
   font-size: 0.4rem;
   font-weight: bolder;
   border-bottom: 2px solid yellow;
@@ -60,16 +71,15 @@ body {
 body {
   background: #1f2534;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.14rem;
-  color: #000;
+  color:#fff;
   margin: 0;
   padding: 0;
 }
 
-.swiper-container,
-.map-contanier {
+.swiper-container {
   width: 100%;
-  height: 44%;
+  height: 40.7%;
+  margin: 0.3rem 0 0.2rem 0;
 }
 
 .swiper-slide {
@@ -89,59 +99,126 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  width: 79%;
+  width: 80%;
   margin: 0 auto;
 }
+
+
 /* 影片评分 */
+
 .film-box {
   width: 12%;
   height: 100%;
   background: #000000;
-  margin-right: 0.30rem;
+  margin-right: 0.7rem;
   color: #787f8c;
 }
 
+.film-img {
+  width: 230px;
+  height: 280px;
+  background: red;
+}
+.film-grade{
+  padding-left: 0.1rem;
+}
 .grade {
-  font-size: 0.16rem;
+  font-size: 0.18rem;
   width: 52%;
+  text-align:left; 
 }
 
 .big {
-  font-size: 0.3rem;
+  font-size: 0.32rem;
   color: #fff;
+  
 }
+
 .big,
-.for{
-  height:0.5rem;
+.for {
+  height: 0.5rem;
   line-height: 0.5rem;
 }
 
-.film-star{
-  padding: 0 0.3rem;
-  margin-top: 0.15rem;
+.film-star {
+  padding: 0 0.35rem;
   height: 0.32rem;
   line-height: 0.32rem;
 }
-.star{
+
+.star {
   margin: 0 0.05rem;
   width: 0.32rem;
 }
 
-/* 影片次数 */
+
+/* **********影片次数********** */
+
 .film-charts-box {
-  width: 34%;
+  width: 33%;
   height: 100%;
-  background: red;
+  background: #000;
 }
-/* 线上占比 */
+.film-name{
+  width:100%;
+  height:0.3rem;
+  font-size: 0.26rem;
+  margin-bottom:0.2rem;
+}
+.name-all{
+  width:80%;
+}
+.film-name img{
+  margin:0.1rem;
+}
+.film-graph{
+  width:98%;
+  margin:0 auto;
+  height:0.4rem;
+  line-height: 0.4rem;
+  border:none;
+  border-radius: 0.04rem;
+  background:#19202d;
+  color:#b5bcc9;
+}
+.film-charts-tab{
+  text-align: center;
+  width: 43%;
+  margin: 0 auto;
+  margin-top:0.1rem;
+  margin-bottom:0.1rem;
+  font-weight: bold;
+  font-size: 0.20rem;
+}
+.film-charts-tab div{
+  border-right:2px solid #ba3a52;
+  color:#ba3a52;
+  padding:0 0.1rem;
+}
+.film-charts-tab div:hover{
+  color:#fff;
+}
+.film-charts-tab div:last-child{
+  border-right:none;
+}
+.film-day-charts{
+  width:100%;
+  height:2.6rem;
+  background: yellow;
+}
+/* **********线上占比********** */
+
 .film-online-box {
-  width: 15.6%;
+  width: 15.7%;
   height: 100%;
   background: green;
 }
-/* 线下占比 */
+
+
+/* **********线下占比********** */
+
 .film-offline-box {
-  width: 15.6%;
+  width: 15.7%;
   height: 100%;
   background: blue;
 }
@@ -151,10 +228,28 @@ body {
 
 
 /*3 map style start! */
+
+.map-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* **********合作伙伴闪烁区域********** */
+
 .map {
-  width: 60%;
-  height: 5.4rem;
+  width: 64%;
+  height: 4.64rem;
   background: yellow;
+}
+
+
+/* **********选项卡********** */
+
+.map-tab {
+  width: 36%;
+  height: 4.64rem;
+  background: orange;
 }
 
 
