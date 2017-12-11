@@ -5,13 +5,13 @@ $(document).ready(function () {
 
 
     var option = {
-        // grid: {
-        //     top:'2%',
-        //     left: '0.2%',
-        //     right: '0.5%',
-        //     bottom: '1%',
-        //     containLabel: true
-        // },
+        grid: {
+            top:'5%',
+            left: '0%',
+            right: '11%',
+            bottom: '5%',
+            containLabel: true
+        },
         xAxis: {
             type: 'category',
             boundaryGap: false,
