@@ -9,17 +9,17 @@ $(document).ready(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
     });
     // top选项
-    $(".top-continer .top-p").click(function () {
-        $(this).css({
-            "background-color": "#dd2556",
-            "color":" #fff",
-            "font-size": "0.22rem"
-        }).siblings().css({
-            "background-color": "##f0f0f0",
-            "color":" #000",
-            "font-size": "0.16rem"
-        });
-    });
+    // $(".top-continer .top-p").click(function () {
+    //     $(this).css({
+    //         "background-color": "#dd2556",
+    //         "color":" #fff",
+    //         "font-size": "0.22rem"
+    //     }).siblings().css({
+    //         "background-color": "##f0f0f0",
+    //         "color":" #000",
+    //         "font-size": "0.16rem"
+    //     });
+    // });
     // 
 });
 //end!
