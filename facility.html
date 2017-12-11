@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<!-- 视图窗口，移动端特属的标签。 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+
+	<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- 忽略页面中的数字识别为电话号码,email识别 -->
+	<meta name="format-detection" content="telephone=no, email=no">
+
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit" ds>
+
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<!-- pc端调整页面兼容代码 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+	<title>大数据-VR CINEMA 影片信息-ONLINE</title>
+	<!-- 1 reset css -->
+	<link rel="stylesheet" href="css/normal.css">
+	<!-- 2 swiper css -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<!-- 3 index.css -->
+	<link rel="stylesheet" href="css/index.css">
+	<!-- 4 styles.css -->
+	<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+	<!-- header start! -->
+	<header class="title width-80 color-pink">
+		<img src="img/VRCINEMAlogo.png" alt="">
+		<div class="line color-gray fs-22">ONLINE</div>
+	</header>
+	<!-- header end! -->
+	<section class="section width-80">
+		<!-- aside-left start! -->
+		<aside class="aside-left">
+			<div class="download">
+				<div class="film-graph color-gray fs-16 width-98">Top5 Cities per Total Downloads</div>
+				<div class="tab fs-12">
+					<div class="tab-body color-pink">
+						<div class="tab-tb">Proportion</div>
+						<div class="tab-tb">City</div>
+						<div class="tab-tb">Download</div>
+						<div class="tab-tb">Daily</div>
+						<div class="tab-tb">Monthly</div>
+					</div>
+					<div class="tab-body color-gray">
+						<div class="tab-tb">12%</div>
+						<div class="tab-tb">Beijing</div>
+						<div class="tab-tb">24,564,365</div>
+						<div class="tab-tb">25,785</div>
+						<div class="tab-tb">29,564,306</div>
+					</div>
+					<div class="tab-body color-gray">
+						<div class="tab-tb">12%</div>
+						<div class="tab-tb">Beijing</div>
+						<div class="tab-tb">24,564,365</div>
+						<div class="tab-tb">25,785</div>
+						<div class="tab-tb">29,564,306</div>
+					</div>
+					<div class="tab-body color-gray">
+						<div class="tab-tb">12%</div>
+						<div class="tab-tb">Beijing</div>
+						<div class="tab-tb">24,564,365</div>
+						<div class="tab-tb">25,785</div>
+						<div class="tab-tb">29,564,306</div>
+					</div>
+					<div class="tab-body color-gray">
+						<div class="tab-tb">12%</div>
+						<div class="tab-tb">Beijing</div>
+						<div class="tab-tb">24,564,365</div>
+						<div class="tab-tb">25,785</div>
+						<div class="tab-tb">29,564,306</div>
+					</div>
+					<div class="tab-body color-gray">
+						<div class="tab-tb">12%</div>
+						<div class="tab-tb">Beijing</div>
+						<div class="tab-tb">24,564,365</div>
+						<div class="tab-tb">25,785</div>
+						<div class="tab-tb">29,564,306</div>
+					</div>
+					<div class="tab-body color-gray">
+						<div class="tab-tb">12%</div>
+						<div class="tab-tb">Beijing</div>
+						<div class="tab-tb">24,564,365</div>
+						<div class="tab-tb">25,785</div>
+						<div class="tab-tb">29,564,306</div>
+					</div>
+					<div class="tab-body color-gray">
+						<div class="tab-tb"></div>
+						<div class="tab-tb color-white">City</div>
+						<div class="tab-tb">324,564,365</div>
+						<div class="tab-tb">85,785</div>
+						<div class="tab-tb">529,564,306</div>
+					</div>
+				</div>
+			</div>
+			<div class="m-phone">
+				<div class="film-graph color-gray fs-16 width-98">The duration of the mobile phone</div>
+				<div id="film-charts-time" class="film-charts-tab	width-40 fs-18">
+					<div class="week">Week</div>
+					<div class="month">Month</div>
+				</div>
+				<!-- 加图表 -->
+				<div class="charts"></div>
+			</div>
+		</aside>
+		<!-- aside-left end! -->
+
+		<!-- aside-right start! -->
+		<aside class="aside-right">
+
+		</aside>
+		<!-- aside-right end! -->
+	</section>
+	<!--script-->
+	<!--1.reset.js引在jQuery之前，HTMLfont-size不用设置100px,其余全部用rem，宽高定死-->
+	<script type="text/javascript" src="js/reset.js"></script>
+	<!--2.jquery-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!--4.轮播-->
+	<script type="text/javascript" src="js/index.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+		});
+	</script>
+</body>
