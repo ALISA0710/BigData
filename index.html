@@ -69,8 +69,8 @@
 
 <body>
 	<!-- header start! -->
-	<header class="title">
-		VR CINEMA
+	<header class="title width-80 color-pink">
+		<img src="img/VRCINEMAlogo.png" alt="">
 	</header>
 	<!-- header end! -->
 
@@ -81,11 +81,11 @@
 				<!-- 1 影片评分 -->
 				<div class="film-box">
 					<div class="film-img">
-						<img src=" " alt="">
+						<img src="img/film-img.png" alt="">
 					</div>
 					<div class="film-grade">
 						<div class="grade">
-							<span class="big">8.5</span>/10
+							<span class="big fs-32">8.5</span>/10
 						</div>
 						<div class="for">(for 122258)</div>
 					</div>
@@ -104,28 +104,61 @@
 							<div class="name-icon">
 								<img src="img/name-icon.png" alt="">
 							</div>
-							<div class="name-title">START TREK III(2017)</div>
+							<div class="name-title fs-24">START TREK III (2017)</div>
 						</div>
 						<div class="time-all">
 							<div class="time-icon">
-									<img src="img/time-icon.png" alt="">
+								<img src="img/time-icon.png" alt="">
 							</div>
-							<div class="time-title">00:02:45</div>
+							<div class="name-title color-gray fs-18">00:02:45</div>
 						</div>
 					</div>
-					<div class="film-graph">Graph of access volume</div>
-					<div class="film-charts-tab">
+					<div class="film-graph color-gray">Graph of visits</div>
+					<div id="film-charts-time" class="film-charts-tab	width-50 fs-18">
 						<div class="day">Day</div>
 						<div class="week">Week</div>
 						<div class="month">Month</div>
 						<div class="year">Year</div>
 					</div>
-					<div class="film-day-charts"></div>
+					<div>
+						<div id="film-day-charts" class="film-day-charts"></div>
+					</div>
+
 				</div>
 				<!-- 3 线上占比 -->
-				<div class="film-online-box"></div>
+				<div class="film-line-box">
+					<div class="line-title fs-18">ONLINE</div>
+					<div id="online-chart-circle" class="chart-circle"></div>
+					<div class="percent">
+						<div class="percent-value fs-32">66.28%</div>
+						<div class="percent-name fs-16">Effective Viewing Rate</div>
+					</div>
+					<div class="visit">
+						<div class="pink color-pink fs-18">Valid</div>
+						<div class="number color-gray fs-30">36,274,246</div>
+					</div>
+					<div class="history">
+						<div class="pink color-pink fs-18">Accumulated</div>
+						<div class="number color-gray fs-30">55,383,432</div>
+					</div>
+				</div>
 				<!-- 4 线下占比 -->
-				<div class="film-offline-box"></div>
+				<div class="film-line-box">
+					<div class="line-title">OFFLINE</div>
+					<div id="offline-chart-circle" class="chart-circle"></div>
+					<div class="percent">
+						<div class="percent-value fs-32">78.55%</div>
+						<div class="percent-name fs-16">Effective Viewing Rate</div>
+					</div>
+					<div class="visit">
+						<div class="pink color-pink fs-18">Valid</div>
+						<div class="number color-gray fs-30">36,274,246</div>
+					</div>
+					<div class="history">
+						<div class="pink color-pink fs-18">Accumulated</div>
+						<div class="number color-gray fs-30">55,383,432</div>
+					</div>
+				</div>
 			</div>
 			<div class="swiper-slide">Slide 2</div>
 			<div class="swiper-slide">Slide 3</div>
@@ -146,12 +179,108 @@
 	<!-- Swiper end! -->
 
 	<!-- Map start! -->
-	<footer class="map-container">
+	<footer class="map-container width-80">
 		<!-- 1 合作伙伴闪烁区域 -->
-		<div class="map"></div>
-		<!-- 2 选项卡 -->
+		<div class="map">
+			<div class="circle-all">
+				<div class="circle-bj">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Beijing</div>
+				</div>
+				<div class="circle-sh">
+					<div class="circle-pink">
+						<div class="circle-data fs-16">
+							<div class="bot"></div>  
+							<div class="top-c">908,977</div> 
+						</div>
+					</div>
+					<div class="circle-name fs-16">Shanghai</div>
+				</div>
+				<div class="circle-kn">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Kanagawa</div>
+				</div>
+				<div class="circle-bo">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Bombay</div>
+				</div>
+				<div class="circle-jo">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Johannesburg</div>
+				</div>
+				<div class="circle-ri">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Rio de Janeiro</div>
+				</div>
+				<div class="circle-ma">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Madird</div>
+				</div>
+				<div class="circle-mo">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Morges</div>
+				</div>
+				<div class="circle-am">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Amsterdam</div>
+				</div>
+				<div class="circle-lo">
+					<div class="circle-name fs-16">London</div>
+					<div class="circle-pink"></div>
+				</div>
+				<div class="circle-to">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Toronto</div>
+				</div>
+				<div class="circle-ne">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">New York</div>
+				</div>
+				<div class="circle-at">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Atlanta</div>
+				</div>
+				<div class="circle-ch">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Chicago</div>
+				</div>
+				<div class="circle-se">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Seattle</div>
+				</div>
+				<div class="circle-los">
+					<div class="circle-pink"></div>
+					<div class="circle-name fs-16">Los Angeles</div>
+				</div>
+			</div>
+		</div>
+		<!-- 2 国家城市公司选项卡 -->
 		<div class="map-tab">
-			<div class="map-tab-top"></div>
+			<div class="map-tab-top width-100">
+				<div id="film-charts-map" class="film-charts-tab width-80 fs-24">
+					<div class="day">COUNTRY</div>
+					<div class="week">CITY</div>
+					<div class="month">COMPANY</div>
+				</div>
+			</div>
+			<div class="top-container">
+				<div class="top">
+					<div class="top-title color-gray fs-22">Top5 in Quality</div>
+					<div class="top-p">New York</div>
+					<div class="top-p">Shanghai</div>
+					<div class="top-p">Beijing</div>
+					<div class="top-p">Toronto</div>
+					<div class="top-p">Los Angeles</div>
+				</div>
+				<div class="top">
+					<div class="top-title color-gray fs-22">Top5 in Number</div>
+					<div class="top-p">Los Angeles</div>
+					<div class="top-p">New York</div>
+					<div class="top-p">London</div>
+					<div class="top-p">Beijing</div>
+					<div class="top-p">Toronto</div>
+				</div>
+			</div>
 		</div>
 	</footer>
 	<!-- Map end! -->
@@ -162,8 +291,16 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<!--3.轮播-->
 	<script type="text/javascript" src="js/swiper.min.js"></script>
-	<!--4.移动端自适应-->
-	<!--<script type="text/javascript" src="js/base.js"></script>-->
+	<!--4.轮播-->
+	<script type="text/javascript" src="js/index.js"></script>
+	<!--5.echarts-->
+	<script src="js/plugin/echarts.min.js"></script>
+	<!--6.echarts-折线-->
+	<script src="js/zhexian-film-day-charts.js"></script>
+	<!--7.echarts-饼状-->
+	<script src="js/online-chart-circle-charts.js"></script>
+	<!--8.echarts-饼状-->
+	<script src="js/offline-chart-circle-charts.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			var swiper = new Swiper('.swiper-container', {

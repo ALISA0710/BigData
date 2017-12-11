@@ -12,7 +12,16 @@
 .film-name,
 .name-all,
 .time-all,
-.film-charts-tab{
+.film-charts-tab,
+.film-line-box,
+.visit,
+.history,
+.map-tab,
+.top-container,
+.top,
+.percent,
+.circle-all>div,
+.circle-data {
   display: -webkit-flex;
   /* Safari */
   display: flex;
@@ -25,7 +34,11 @@
 .film-name,
 .name-all,
 .time-all,
-.film-charts-tab {
+.film-charts-tab,
+.visit,
+.history,
+.top-container,
+.circle-all>div {
   flex-direction: row;
 }
 
@@ -33,7 +46,12 @@
 .film-charts-box,
 .film-online-box,
 .film-offline-box,
-.film-charts-box{
+.film-charts-box,
+.film-line-box,
+.map-tab,
+.top,
+.percent ,
+.circle-data{
   flex-direction: column;
 }
 
@@ -41,17 +59,111 @@
 /* flex布局 end! */
 
 
+/* 颜色 start! */
+
+.color-pink {
+  color: #dc3959;
+}
+
+.color-gray {
+  color: #aeb5c2;
+}
+
+
+/* 颜色 end! */
+
+
+/* 宽度 start! */
+
+.width-100 {
+  width: 100%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-70 {
+  width: 70%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-10 {
+  width: 10%;
+}
+
+
+/* 宽度 end！ */
+
+
+/* 字体大小 start！ */
+
+.fs-32 {
+  font-size: 0.32rem;
+}
+
+.fs-30 {
+  font-size: 0.3rem;
+}
+
+.fs-26 {
+  font-size: 0.26rem;
+}
+
+.fs-24 {
+  font-size: 0.24rem;
+}
+
+.fs-22 {
+  font-size: 0.22rem;
+}
+
+.fs-18 {
+  font-size: 0.18rem;
+}
+
+.fs-16 {
+  font-size: 0.16rem;
+}
+
+.fs-12 {
+  font-size: 0.12rem;
+}
+
+
+/* 字体大小 end! */
+
+
 /* 1 header style start! */
 
 .title {
-  width: 80%;
-  height: 10%;
+  height: 1.1rem;
   line-height: 1.2rem;
   margin: 0 auto;
-  font-size: 0.4rem;
-  font-weight: bolder;
-  border-bottom: 2px solid yellow;
-  color: #dc2357;
+  border-bottom: 1px solid #1e2330;
 }
 
 
@@ -69,16 +181,17 @@ body {
 }
 
 body {
-  background: #1f2534;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  color:#fff;
+  color: #fff;
   margin: 0;
   padding: 0;
+  background: url(../img/BG.png) no-repeat;
+  background-size: 100% 100%;
 }
 
 .swiper-container {
   width: 100%;
-  height: 40.7%;
+  height: 4.1rem;
   margin: 0.3rem 0 0.2rem 0;
 }
 
@@ -109,7 +222,7 @@ body {
 .film-box {
   width: 12%;
   height: 100%;
-  background: #000000;
+  /* background: #000000; */
   margin-right: 0.7rem;
   color: #787f8c;
 }
@@ -117,21 +230,21 @@ body {
 .film-img {
   width: 230px;
   height: 280px;
-  background: red;
+  /* background: red; */
 }
-.film-grade{
+
+.film-grade {
   padding-left: 0.1rem;
 }
+
 .grade {
   font-size: 0.18rem;
   width: 52%;
-  text-align:left; 
+  text-align: left;
 }
 
 .big {
-  font-size: 0.32rem;
   color: #fff;
-  
 }
 
 .big,
@@ -142,13 +255,14 @@ body {
 
 .film-star {
   padding: 0 0.35rem;
-  height: 0.32rem;
-  line-height: 0.32rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  margin-top: 0.1rem;
 }
 
 .star {
   margin: 0 0.05rem;
-  width: 0.32rem;
+  width: 0.22rem;
 }
 
 
@@ -157,70 +271,128 @@ body {
 .film-charts-box {
   width: 33%;
   height: 100%;
-  background: #000;
+  /* background: #000; */
 }
-.film-name{
-  width:100%;
-  height:0.3rem;
-  font-size: 0.26rem;
-  margin-bottom:0.2rem;
+
+.film-name {
+  width: 100%;
+  height: 0.3rem;
+  margin-bottom: 0.2rem;
 }
-.name-all{
-  width:80%;
+
+.name-all {
+  width: 80%;
 }
-.film-name img{
-  margin:0.1rem;
+
+.film-name img {
+  margin: 0.1rem;
 }
-.film-graph{
-  width:98%;
-  margin:0 auto;
-  height:0.4rem;
+
+.name-title {
   line-height: 0.4rem;
-  border:none;
-  border-radius: 0.04rem;
-  background:#19202d;
-  color:#b5bcc9;
 }
-.film-charts-tab{
-  text-align: center;
-  width: 43%;
+
+.film-graph {
+  width: 98%;
   margin: 0 auto;
-  margin-top:0.1rem;
-  margin-bottom:0.1rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border: none;
+  border-radius: 0.04rem;
+  background: #19202d;
+}
+
+
+/* 选项卡 */
+
+.film-charts-tab {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-weight: bold;
-  font-size: 0.20rem;
 }
-.film-charts-tab div{
-  border-right:2px solid #ba3a52;
-  color:#ba3a52;
-  padding:0 0.1rem;
+
+.film-charts-tab div {
+  border-right: 2px solid #ba3a52;
+  color: #ba3a52;
+  padding: 0 0.15rem;
 }
-.film-charts-tab div:hover{
-  color:#fff;
+
+
+/* .film-charts-tab div:hover {
+  color: #fff;
+} */
+
+.film-charts-tab div:nth-child(2) {
+  color: #fff;
 }
-.film-charts-tab div:last-child{
-  border-right:none;
+
+.film-charts-tab div:last-child {
+  border-right: none;
 }
-.film-day-charts{
-  width:100%;
-  height:2.6rem;
+
+.film-day-charts {
+  width: 6.7rem;
+  height: 2.8rem;
   background: yellow;
 }
-/* **********线上占比********** */
 
-.film-online-box {
+
+/* **********线上占比----线下占比********** */
+
+.film-line-box {
+  position: relative;
   width: 15.7%;
   height: 100%;
-  background: green;
+  /* background: green; */
 }
 
+.line-title {
+  margin: 0.1rem 0;
+  font-weight: normal;
+}
 
-/* **********线下占比********** */
+.chart-circle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  background: red;
+  margin: 0 auto;
+}
 
-.film-offline-box {
-  width: 15.7%;
-  height: 100%;
-  background: blue;
+.percent {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  z-index: 100000;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.percent-value {
+  margin-top: 0.7rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+
+.percent-name {
+  height: 0.3rem;
+  line-height: 0.3rem;
+}
+
+.pink {
+  width: 1rem;
+  margin: 0 0.3rem 0 0;
+  text-align: right;
+}
+
+.pink,
+.number {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  margin-top: 0.1rem;
 }
 
 
@@ -230,26 +402,250 @@ body {
 /*3 map style start! */
 
 .map-container {
-  width: 80%;
   margin: 0 auto;
+  background: url(../img/map-container.png) no-repeat;
+  background-size: 100% 100%;
 }
 
 
 /* **********合作伙伴闪烁区域********** */
 
 .map {
+  position: relative;
   width: 64%;
   height: 4.64rem;
-  background: yellow;
+  margin: 0.3rem 0.5rem;
+  background: url(../img/woldmap.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.circle-all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  /* background: yellow; */
+}
+
+.circle-all>div {
+  height: 0.02rem;
+  line-height: 0.2rem;
+}
+
+.circle-pink {
+  position: relative;
+  width: 0.06rem;
+  height: 0.06rem;
+  border-radius: 50%;
+  background: #dc3959;
+  margin: 0.07rem;
+}
+
+.circle-data{
+  position: absolute;
+  top: 0.1rem; 
+  left:0.02rem;
+}
+
+.bot {
+  width: 0;
+  height: 0;
+  border-bottom: 0.12rem solid #dc3959;
+  border-right: 0.08rem solid transparent;
+}
+
+.top-c{
+  text-align: center; 
+  width:1.2rem;
+  height:0.26rem;
+  line-height: 0.26rem;
+  background-color: #dc3959;
+
+}
+
+.circle-bj {
+  position: absolute;
+  top: 1.2rem;
+  left: 6.9rem;
+}
+
+
+/* Shanghai */
+
+.circle-sh {
+  position: absolute;
+  top: 1.6rem;
+  left: 7rem;
+}
+
+
+/* Kanagawa */
+
+.circle-kn {
+  position: absolute;
+  top: 1.4rem;
+  left: 7.5rem;
+}
+
+
+/* Bombay */
+
+.circle-bo {
+  position: absolute;
+  top: 2rem;
+  left: 5.9rem;
+}
+
+
+/* Johannesburg */
+
+.circle-jo {
+  position: absolute;
+  top: 3.7rem;
+  left: 4.3rem;
+}
+
+
+/* Rio de Janeiro */
+
+.circle-ri {
+  position: absolute;
+  top: 3.8rem;
+  left: 2.2rem;
+}
+
+
+/* Madird */
+
+.circle-ma {
+  position: absolute;
+  top: 1.2rem;
+  left: 3.6rem;
+}
+
+
+/* Morges */
+
+.circle-mo {
+  position: absolute;
+  top: 1rem;
+  left: 3.9rem;
+}
+
+
+/* Amsterdam */
+
+.circle-am {
+  position: absolute;
+  top: 0.8rem;
+  left: 3.8rem;
+}
+
+
+/* London */
+
+.circle-lo {
+  position: absolute;
+  top: 0.8rem;
+  left: 3.1rem;
+}
+
+
+/* Toronto */
+
+.circle-to {
+  position: absolute;
+  top: 0.6rem;
+  left: 2.15rem;
+}
+
+
+/* New York */
+
+.circle-ne {
+  position: absolute;
+  top: 0.95rem;
+  left: 2rem;
+}
+
+
+/* Atlanta */
+
+.circle-at {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+}
+
+
+/* Chicago */
+
+.circle-ch {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.3rem;
+}
+
+
+/* Seattle */
+
+.circle-se {
+  position: absolute;
+  top: 1.05rem;
+  left: 0.45rem;
+}
+
+
+/* Los Angeles */
+
+.circle-los {
+  position: absolute;
+  top: 1.25rem;
+  left: 0.3rem;
 }
 
 
 /* **********选项卡********** */
 
 .map-tab {
-  width: 36%;
+  width: 34%;
   height: 4.64rem;
-  background: orange;
+  /* background: orange; */
+  text-align: center;
+  margin: 0 0.4rem 0 0.3rem;
+}
+
+.map-tab-top {
+  border-bottom: 1px solid #717580;
+  padding: 0.1rem 0;
+  margin-bottom: 0.2rem;
+}
+
+.top-title {
+  font-size: 0.22rem;
+}
+
+.top {
+  width: 50%;
+}
+
+.top-p {
+  font-size: 0.16rem;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  color: #000;
+  /* text-align: center; */
+  margin: 0.1rem 0.2rem 0.1rem 0.2rem;
+  border-radius: 0.05rem;
+  background-color: #f0f0f0;
+}
+
+.top-p:hover {
+  background: #dd2556;
+  color: #fff;
+  font-size: 0.22rem;
 }
 
 
