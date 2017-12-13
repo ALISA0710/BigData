@@ -26,7 +26,10 @@ $(document).ready(function () {
             }
         }]
     };
-
+    
     myChart.setOption(option3);
+    window.addEventListener("resize",function(){
+        myChart.resize();
+    });
 });
 //end!

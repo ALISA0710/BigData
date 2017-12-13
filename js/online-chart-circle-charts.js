@@ -30,5 +30,8 @@ $(document).ready(function () {
         };
     
         myChart.setOption(option2);
+        window.addEventListener("resize",function(){
+            myChart.resize();
+        });
     });
     //end!

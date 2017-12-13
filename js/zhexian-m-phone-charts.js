@@ -129,5 +129,8 @@ $(document).ready(function () {
     };
 
     myChart.setOption(option4);
+    window.addEventListener("resize",function(){
+        myChart.resize();
+    });
 });
 //end!
