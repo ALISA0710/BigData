@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<!-- 视图窗口，移动端特属的标签。 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+
+	<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- 忽略页面中的数字识别为电话号码,email识别 -->
+	<meta name="format-detection" content="telephone=no, email=no">
+
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit" ds>
+
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<!-- pc端调整页面兼容代码 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+	<title>大数据-VR CINEMA 影片信息-ONLINE3</title>
+	<!-- 1 reset css -->
+	<link rel="stylesheet" href="css/normal.css">
+	<!-- 2 swiper css -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<!-- 3 index.css -->
+	<link rel="stylesheet" href="css/index.css">
+	<!-- 4 styles.css -->
+	<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+	<!-- header start! -->
+	<header class="title width-80 color-pink">
+		<img src="img/VRCINEMAlogo.png" alt="">
+		<div class="line color-gray fs-22">ONLINE</div>
+	</header>
+	<!-- header end! -->
+	<section class="section-p">
+		<!-- aside-left start! -->
+		<aside class="aside-left">
+			<div class="duration width-100">
+				<div class="dur fs-20">Preferred Duration</div>
+				<div class="per-a"></div>
+			</div>
+			<div class="genre width-100">
+				<div class="gen fs-20">Preferred Genre</div>
+				<div class="per-b"></div>
+			</div>
+		</aside>
+		<!-- aside-left end! -->
+
+		<!-- aside-right start! -->
+		<aside class="aside-right">
+			<div class="application-download">
+				<div class="film-graph color-gray fs-16 width-98">Distribution of Preferred Aplication Download</div>
+				<div class="film-charts-tab	width-25 fs-18">
+					<div class="day">Day</div>
+					<div class="week">Week</div>
+					<div class="month">Month</div>
+					<div class="year">Year</div>
+				</div>
+				<!-- 加图表调整 -->
+				<div id="application-download-charts" class="charts hgt-240">
+					<div class="film-day-charts"></div>
+				</div>
+			</div>
+			<div class="facility-box mgn-top-40 color-gray fs-14">
+				<div class="user-left-b">
+					<div class="total-user color-pink fs-20">OFFLINE SALES</div>
+					<div class="facility-title color-pink fs-14">TODAY</div>
+					<div class="facility-num fs-28">25,785</div>
+					<div class="border"></div>
+					<div class="facility-title color-pink fs-16">TOTAL</div>
+					<div class="facility-num fs-28">258,564,347</div>
+				</div>
+
+				<div class="user-right-b">
+					<div class="user-img">
+						<div class="user-per-img">
+							<img src="img/vive.png" alt="">
+						</div>
+						<div class="user-per-img">
+							<img src="img/GearVR.png" alt="">
+						</div>
+						<div class="user-per-img">
+							<img src="img/htc.png" alt="">
+						</div>
+						<div class="user-per-img">
+							<img src="img/OCULUS.png" alt="">
+						</div>
+					</div>
+					<div class="user-name"></div>
+					<div class="user-box-percent"></div>
+				</div>
+			</div>
+			<div class="user-right"></div>
+		</aside>
+		<!-- aside-right end! -->
+	</section>
+	<!--script-->
+	<!--1.reset.js引在jQuery之前，HTMLfont-size不用设置100px,其余全部用rem，宽高定死-->
+	<script type="text/javascript" src="js/reset.js"></script>
+	<!--2.jquery-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!--4.轮播-->
+	<script type="text/javascript" src="js/index.js"></script>
+	<!--5.echarts-->
+	<!-- <script src="js/plugin/echarts.min.js"></script> -->
+	<!--6.echarts-折线m-phone-charts.js-->
+	<!-- <script src="js/zhexian-m-phone-charts.js"></script> -->
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+		});
+	</script>
+</body>

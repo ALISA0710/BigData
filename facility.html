@@ -54,7 +54,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="renderer" content="webkit|ie-comp|ie-stand">
 
-	<title>大数据-VR CINEMA 影片信息-ONLINE</title>
+	<title>大数据-VR CINEMA 影片信息-ONLINE1</title>
 	<!-- 1 reset css -->
 	<link rel="stylesheet" href="css/normal.css">
 	<!-- 2 swiper css -->
@@ -77,7 +77,7 @@
 	<section class="section width-80">
 		<!-- aside-left start! -->
 		<aside class="aside-left">
-			<div class="download">
+			<div class="total-download">
 				<div class="film-graph color-gray fs-16 width-98">Top5 Cities per Total Downloads</div>
 				<div class="tab fs-12">
 					<div class="tab-body color-pink">
@@ -144,15 +144,122 @@
 					<div class="week">Week</div>
 					<div class="month">Month</div>
 				</div>
-				<!-- 加图表 -->
-				<div class="charts"></div>
+				<!-- 加图表调整 -->
+				<div class="charts">
+					<div id="m-phone-charts" class="film-day-charts"></div>
+				</div>
 			</div>
 		</aside>
 		<!-- aside-left end! -->
 
 		<!-- aside-right start! -->
 		<aside class="aside-right">
-
+			<div class="application-download">
+				<div class="film-graph color-gray fs-16 width-98">Distribution of Preferred Aplication Download</div>
+				<div class="film-charts-tab	width-25 fs-18">
+					<div class="day">Day</div>
+					<div class="week">Week</div>
+					<div class="month">Month</div>
+					<div class="year">Year</div>
+				</div>
+				<!-- 加图表调整 -->
+				<div id="application-download-charts" class="charts hgt-280">
+					<div class="film-day-charts"></div>
+				</div>
+			</div>
+			<div class="facility-box mgn-top-80 color-gray fs-14 hgt-440">
+				<div class="facility-left">
+					<!--1 Stadalone  -->
+					<div class="facility1">
+						<div class="facility-s-left">
+							<div class="facility-name">
+								<div class="facility-img">
+									<img src="img/Standalone.png" alt="">
+								</div>
+								<div class="facility-bold fs-18">Stadalone</div>
+								<div class="facility-title color-pink fs-12">Daily</div>
+								<div class="facility-num">36,775</div>
+								<div class="facility-title color-pink fs-12">Monthly</div>
+								<div class="facility-num">7,894,312</div>
+							</div>
+							<div class="facility-top-all">
+								<div class="facility-top">1 Vive Focus</div>
+								<div class="facility-top">2 DAPENG</div>
+								<div class="facility-top">3 YISHI</div>
+								<div class="facility-top">4 Pico</div>
+								<div class="facility-top">5 TCL</div>
+								<div class="facility-top">6 IQIYI VR</div>
+								<div class="facility-top">7 Lenovo</div>
+								<div class="facility-top">8 Oculus</div>
+								<div class="facility-top">9 UGP</div>
+							</div>
+						</div>
+						<div class="facility-s-right">
+							<div class="facility-circle"></div>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="facility1">
+						<div class="facility-s-left">
+							<div class="facility-name">
+								<div class="facility-img">
+									<img src="img/Mobile.png" alt="">
+								</div>
+								<div class="facility-bold fs-18">Mobile</div>
+								<div class="facility-title color-pink fs-12">Daily</div>
+								<div class="facility-num">36,775</div>
+								<div class="facility-title color-pink fs-12">Monthly</div>
+								<div class="facility-num">7,894,312</div>
+							</div>
+							<div class="facility-top-all">
+								<div class="facility-top">1 IPhone</div>
+								<div class="facility-top">2 SAMGSUN</div>
+								<div class="facility-top">3 HUAWEI</div>
+								<div class="facility-top">4 XIAOMI</div>
+								<div class="facility-top">5 VIVO</div>
+								<div class="facility-top">6 OPPO</div>
+								<div class="facility-top">7 HTC</div>
+								<div class="facility-top">8 Google</div>
+								<div class="facility-top">9 Other</div>
+							</div>
+						</div>
+						<div class="facility-s-right">
+							<div class="facility-circle"></div>
+						</div>
+					</div>
+				</div>
+				<div class="facility-right">
+					<!-- 3 pc -->
+					<div class="facility2">
+						<div class="facility-s-left">
+							<div class="facility-name">
+								<div class="facility-img">
+									<img src="img/PC.png" alt="">
+								</div>
+								<div class="facility-bold fs-18">PC</div>
+								<div class="facility-title color-pink fs-12">Daily</div>
+								<div class="facility-num">36,775</div>
+								<div class="facility-title color-pink fs-12">Monthly</div>
+								<div class="facility-num">7,894,312</div>
+							</div>
+							<div class="facility-top-all">
+								<div class="facility-top">1 HTC Vive</div>
+								<div class="facility-top">2 Oculus</div>
+								<div class="facility-top">3 PS VR</div>
+								<div class="facility-top">4 Windows MR</div>
+								<div class="facility-top">5 DaPeng</div>
+								<div class="facility-top">6 Xiao Pai</div>
+								<div class="facility-top">7 Hypereal</div>
+								<div class="facility-top">8 3Glasses</div>
+								<div class="facility-top">9 Goovis</div>
+							</div>
+						</div>
+						<div class="facility-s-right">
+							<div class="facility-circle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</aside>
 		<!-- aside-right end! -->
 	</section>
@@ -163,6 +270,10 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<!--4.轮播-->
 	<script type="text/javascript" src="js/index.js"></script>
+	<!--5.echarts-->
+	<script src="js/plugin/echarts.min.js"></script>
+	<!--6.echarts-折线m-phone-charts.js-->
+	<script src="js/zhexian-m-phone-charts.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
