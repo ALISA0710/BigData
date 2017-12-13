@@ -52,12 +52,14 @@
 .user-left,
 .duration,
 .genre,
+
 /* d */
+
 .user-right-b,
 .user-img,
+.user-name-all,
 .user-name,
-.user-box-percent
-{
+.user-box-percent {
   display: -webkit-flex;
   /* Safari */
   display: flex;
@@ -96,10 +98,14 @@
 .user,
 .duration,
 .genre,
+
 /* d */
+
 .user-img,
+.user-name-all,
 .user-name,
-.user-box-percent {
+.user-box-percent,
+.user-name {
   flex-direction: row;
 }
 
@@ -131,7 +137,9 @@
 /* c */
 
 .user-left,
+
 /* d */
+
 .user-right-b {
   flex-direction: column;
 }
@@ -225,9 +233,11 @@
 .hgt-500 {
   height: 5.00rem;
 }
-.hgt-440{
+
+.hgt-440 {
   height: 4.40rem;
 }
+
 .hgt-399 {
   height: 3.99rem;
 }
@@ -299,6 +309,7 @@
 .mgn-top-80 {
   margin-top: 0.8rem;
 }
+
 .mgn-top-40 {
   margin-top: 0.4rem;
 }
@@ -1027,7 +1038,7 @@ body {
 .user-left-b {
   width: 2.4rem;
   height: 2rem;
-  margin-left:0.15rem;
+  margin-left: 0.15rem;
   text-align: right;
   background: url(../img/offline-bg.png) no-repeat;
   background-size: 100% 100%;
@@ -1036,6 +1047,7 @@ body {
 .user-left-a div {
   margin-right: 0.5rem;
 }
+
 .user-left-b div {
   margin-right: 0.25rem;
 }
@@ -1051,31 +1063,36 @@ body {
   margin-top: 0.15rem;
   width: 99%;
 }
+
 .user-left-b .border {
   /* height:0.01rem; */
   border: 1px solid #5f636f;
   margin-top: 0.1rem;
   width: 99%;
 }
-.user-right{
-  width:10.7rem;
+
+.user-right {
+  width: 10.7rem;
   height: 2.6rem;
-  margin:0.4rem 0.25rem 0 0.15rem;
+  margin: 0.4rem 0.25rem 0 0.15rem;
   background-color: red;
 }
+
 .user-right-a {
   width: 71.5%;
   margin-left: 4.5%;
   height: 2.5rem;
   background-color: red;
 }
-.user-right-b{
+
+.user-right-b {
   width: 71.5%;
   margin-left: 3.5%;
   height: 2rem;
   background: url(../img/offline-per-bg.png) no-repeat;
   background-size: 100% 100%;
 }
+
 
 /* 第四章 */
 
@@ -1132,4 +1149,36 @@ body {
   border-radius: 50%;
   margin: 0.9rem 0.15rem 0.3rem 0.15rem;
   background-color: red;
+}
+
+.user-img {
+  padding: 0 0.6rem;
+}
+
+.user-per-img {
+  width: 1.1rem;
+  margin: 0 0.3rem;
+}
+.user-name-all{
+  width:7.5rem;
+  margin: 0 auto;
+}
+
+.user-name {
+  /* width: 25%; */
+  text-align: center;
+  padding: 0 0.3rem;
+}
+
+.user-title{
+  height: 0.3rem;
+  line-height: 0.3rem;
+}
+
+.user-circle {
+  width: 0.16rem;
+  height: 0.16rem;
+  border-radius: 0.08rem;
+  background-color: red;
+  margin:0.06rem;
 }
