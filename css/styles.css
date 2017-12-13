@@ -51,7 +51,13 @@
 .user,
 .user-left,
 .duration,
-.genre {
+.genre,
+/* d */
+.user-right-b,
+.user-img,
+.user-name,
+.user-box-percent
+{
   display: -webkit-flex;
   /* Safari */
   display: flex;
@@ -89,7 +95,11 @@
 .section-p,
 .user,
 .duration,
-.genre {
+.genre,
+/* d */
+.user-img,
+.user-name,
+.user-box-percent {
   flex-direction: row;
 }
 
@@ -120,7 +130,9 @@
 
 /* c */
 
-.user-left {
+.user-left,
+/* d */
+.user-right-b {
   flex-direction: column;
 }
 
