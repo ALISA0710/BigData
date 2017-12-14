@@ -79,11 +79,11 @@
 		<aside class="aside-left">
 			<div class="duration width-100">
 				<div class="dur fs-20">Preferred Duration</div>
-				<div class="per-a"></div>
+				<div id="p-duration" class="per-a"></div>
 			</div>
 			<div class="genre width-100">
 				<div class="gen fs-20">Preferred Genre</div>
-				<div class="per-b"></div>
+				<div id="p-genre" class="per-b"></div>
 			</div>
 		</aside>
 		<!-- aside-left end! -->
@@ -99,62 +99,10 @@
 					<div class="year">Year</div>
 				</div>
 				<!-- 加图表调整 -->
-				<div id="application-download-charts" class="charts hgt-730">
-					<div class="film-day-charts"></div>
+				<div id="view" class="application-download-charts charts hgt-730">
 				</div>
 			</div>
-			<!-- <div class="facility-box mgn-top-40 color-gray fs-14">
-				<div class="user-left-b">
-					<div class="total-user color-pink fs-20">OFFLINE SALES</div>
-					<div class="facility-title color-pink fs-14">TODAY</div>
-					<div class="facility-num fs-28">25,785</div>
-					<div class="border"></div>
-					<div class="facility-title color-pink fs-16">TOTAL</div>
-					<div class="facility-num fs-28">258,564,347</div>
-				</div>
 
-				<div class="user-right-b">
-					<div class="user-img">
-						<div class="user-per-img">
-							<img src="img/vive.png" alt="">
-						</div>
-						<div class="user-per-img">
-							<img src="img/GearVR.png" alt="">
-						</div>
-						<div class="user-per-img">
-							<img src="img/htc.png" alt="">
-						</div>
-						<div class="user-per-img">
-							<img src="img/OCULUS.png" alt="">
-						</div>
-					</div>
-					<div class="user-name-all fs-16">
-						<div class="user-name">
-							<div class="user-circle"></div>
-							<div class="user-title">Vive Focus</div>
-						</div>
-						<div class="user-name">
-							<div class="user-circle"></div>
-							<div class="user-title">Gear VR</div>
-						</div>
-						<div class="user-name">
-							<div class="user-circle"></div>
-							<div class="user-title">HTC Vive </div>
-						</div>
-						<div class="user-name">
-							<div class="user-circle"></div>
-							<div class="user-title">Oculus</div>
-						</div>
-					</div>
-					<div class="user-box-percent color-white fs-18">
-						<div class="vive-focus-value">27.3%</div>
-						<div class="gear-vr-value">26.8%</div>
-						<div class="htc-vive-value">23.4%</div>
-						<div class="oculus-value">22.5%</div>
-					</div>
-				</div>
-			</div>
-			<div class="user-right"></div> -->
 		</aside>
 		<!-- aside-right end! -->
 	</section>
@@ -163,12 +111,16 @@
 	<script type="text/javascript" src="js/reset.js"></script>
 	<!--2.jquery-->
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<!--4.轮播-->
+	<!--3.js-->
 	<script type="text/javascript" src="js/index.js"></script>
-	<!--5.echarts-->
-	<!-- <script src="js/plugin/echarts.min.js"></script> -->
-	<!--6.echarts-折线m-phone-charts.js-->
-	<!-- <script src="js/zhexian-m-phone-charts.js"></script> -->
+	<!--4.echarts-->
+	<script src="js/plugin/echarts.min.js"></script>
+	<!--5.echarts-折线view-zhexian-->
+	<script src="js/view-zhexian.js"></script>
+	<!--6.echarts-饼图p-duration-->
+	<script src="js/p-duration.js"></script>
+	<!--7.echarts-饼图p-genre-->
+	<script src="js/p-genre.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () {

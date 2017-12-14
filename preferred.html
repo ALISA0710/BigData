@@ -79,11 +79,11 @@
 		<aside class="aside-left">
 			<div class="duration width-100">
 				<div class="dur fs-20">Preferred Duration</div>
-				<div class="per-a"></div>
+				<div id="duration" class="per-a"></div>
 			</div>
 			<div class="genre width-100">
 				<div class="gen fs-20">Preferred Genre</div>
-				<div class="per-b"></div>
+				<div id="genre" class="per-b"></div>
 			</div>
 		</aside>
 		<!-- aside-left end! -->
@@ -91,7 +91,7 @@
 		<!-- aside-right start! -->
 		<aside class="aside-right">
 			<div class="application-download">
-				<div class="film-graph color-gray fs-16 width-98">Distribution of Preferred Aplication Download</div>
+				<div class="film-graph color-gray fs-16 width-98">Distribution of Preferred Viewing Time</div>
 				<div class="film-charts-tab	width-25 fs-18">
 					<div class="day">Day</div>
 					<div class="week">Week</div>
@@ -99,8 +99,7 @@
 					<div class="year">Year</div>
 				</div>
 				<!-- 加图表调整 -->
-				<div id="application-download-charts" class="charts hgt-240">
-					<div class="film-day-charts"></div>
+				<div id="time-zhexian" class="application-download-charts charts hgt-240">
 				</div>
 			</div>
 			<div class="facility-box mgn-top-40 color-gray fs-14">
@@ -163,13 +162,18 @@
 	<script type="text/javascript" src="js/reset.js"></script>
 	<!--2.jquery-->
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<!--4.轮播-->
+	<!--3.js-->
 	<script type="text/javascript" src="js/index.js"></script>
-	<!--5.echarts-->
-	<!-- <script src="js/plugin/echarts.min.js"></script> -->
-	<!--6.echarts-折线m-phone-charts.js-->
-	<!-- <script src="js/zhexian-m-phone-charts.js"></script> -->
-
+	<!--4.echarts-->
+	<script src="js/plugin/echarts.min.js"></script>
+	<!--5.echarts-折线time-zhexian-->
+	<script src="js/time-zhexian.js"></script>
+	<!--6.echarts-饼图duration-->
+	<script src="js/duration.js"></script>
+	<!--7.echarts-饼图genre-->
+	<script src="js/genre.js"></script>
+	<!--8.echarts-饼图mobile-->
+	<!-- <script src="js/mobile.js"></script> -->
 	<script type="text/javascript">
 		$(document).ready(function () {
 
