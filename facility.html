@@ -146,7 +146,7 @@
 				</div>
 				<!-- 加图表调整 -->
 				<div class="charts">
-					<div id="m-phone-charts" class="film-day-charts"></div>
+					<div id="m-phone-zhexian" class="film-day-charts m-phone-zhexian"></div>
 				</div>
 			</div>
 		</aside>
@@ -163,11 +163,13 @@
 					<div class="year">Year</div>
 				</div>
 				<!-- 加图表调整 -->
-				<div id="application-download-charts" class="charts hgt-280">
-					<div class="film-day-charts"></div>
+				<div id="dl-zhexian" class="application-download-charts charts hgt-280">
+					<div class="index-logo">
+						
+					</div>
 				</div>
 			</div>
-			<div class="facility-box mgn-top-80 color-gray fs-14 hgt-440">
+			<div class="facility-box mgn-top-60 color-gray fs-14 hgt-440">
 				<div class="facility-left">
 					<!--1 Stadalone  -->
 					<div class="facility1">
@@ -195,7 +197,7 @@
 							</div>
 						</div>
 						<div class="facility-s-right">
-							<div class="facility-circle"></div>
+							<div id="standalone" class="facility-circle"></div>
 						</div>
 					</div>
 					<!-- 2 -->
@@ -224,7 +226,7 @@
 							</div>
 						</div>
 						<div class="facility-s-right">
-							<div class="facility-circle"></div>
+							<div id="mobile" class="facility-circle"></div>
 						</div>
 					</div>
 				</div>
@@ -255,7 +257,7 @@
 							</div>
 						</div>
 						<div class="facility-s-right">
-							<div class="facility-circle"></div>
+							<div id="pc" class="facility-circle"></div>
 						</div>
 					</div>
 				</div>
@@ -272,8 +274,16 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<!--5.echarts-->
 	<script src="js/plugin/echarts.min.js"></script>
-	<!--6.echarts-折线m-phone-charts.js-->
-	<script src="js/zhexian-m-phone-charts.js"></script>
+	<!--6.echarts-折线m-phone-zhexian-->
+	<script src="js/m-phone-zhexian.js"></script>
+	<!--7.echarts-折线dl-zhexian-->
+	<script src="js/dl-zhexian.js"></script>
+	<!--8.echarts-饼图standalone-->
+	<script src="js/standalone.js"></script>
+	<!--9.echarts-饼图mobile-->
+	<script src="js/mobile.js"></script>
+	<!--10.echarts-饼图pc-->
+	<script src="js/pc.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () {

@@ -1,14 +1,14 @@
 //start!
 $(document).ready(function () {
 
-    var myChart = echarts.init(document.getElementById("m-phone-charts"));
+    var myChart = echarts.init(document.getElementById("m-phone-zhexian"));
 
 
     var option4 = {
         grid: {
             top:'5%',
-            left: '0%',
-            right: '0%',
+            left: '2%',
+            right: '2%',
             bottom: '1%',
             containLabel: true
         },
@@ -21,7 +21,7 @@ $(document).ready(function () {
                 show: true,
                 textStyle: {
                     color: '#a6acbc',
-                    fontSize: '17.6'
+                    fontSize: '10'
                 }
             },
             // 控制网格线是否显示
@@ -50,10 +50,7 @@ $(document).ready(function () {
             // }      
         },
         yAxis: {
-            type: 'time',
-            axisLabel: {
-                formatter: '{time} min'
-            },
+            type: 'value',
             splitLine: {　　　　
                 show: true,
                 //  改变轴线颜色
@@ -65,6 +62,7 @@ $(document).ready(function () {
             },
             // y轴的字体样式
             axisLabel: {
+                formatter: '{value} min',
                 show: true,
                 textStyle: {
                     color: '#a6acbc',
@@ -103,10 +101,11 @@ $(document).ready(function () {
                         lineStyle: {
                             // 折线颜色
                             color: '#d22a5d'
-                        }
+                        },
+                        formatter: '{value} min',
                     }
                 },
-                data: [9268, 9632, 46547, 104332, 136993, 111545, 90897],
+                data: [38, 28, 33, 40, 38, 49, 51],
                 markPoint: {
                     data: [{
                             type: 'value',

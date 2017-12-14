@@ -1,7 +1,7 @@
 //start!
 $(document).ready(function () {
 
-    var myChart = echarts.init(document.getElementById("offline-chart-circle"));
+    var myChart = echarts.init(document.getElementById("sw-offline1"));
 
 
     var option3 = {

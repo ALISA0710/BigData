@@ -229,6 +229,9 @@
 
 
 /* 高度 start! */
+.hgt-730{
+  height: 7.30rem;
+}
 
 .hgt-500 {
   height: 5.00rem;
@@ -249,7 +252,6 @@
 .hgt-240 {
   height: 2.40rem;
 }
-
 
 /* 高度 end！ */
 
@@ -309,6 +311,9 @@
 .mgn-top-80 {
   margin-top: 0.8rem;
 }
+.mgn-top-60 {
+  margin-top: 0.6rem;
+}
 
 .mgn-top-40 {
   margin-top: 0.4rem;
@@ -318,6 +323,9 @@
   margin-bottom: 0.50rem;
 }
 
+.pad-top-30 {
+  padding-top: 0.3rem;
+}
 
 /* 外间距 end！ */
 
@@ -495,10 +503,10 @@ body {
 .film-day-charts {
   width: 100%;
   height: 100%;
-  background: yellow;
+  /* background: yellow; */
 }
 
-#film-day-charts {
+.sw-film{
   width: 6.7rem;
   height: 2.3rem;
 }
@@ -942,8 +950,8 @@ body {
   /* background-color:green; */
 }
 
-#m-phone-charts {
-  width: 3.8rem;
+.m-phone-zhexian {
+  width: 4rem;
   height: 3.2rem;
 }
 
@@ -965,11 +973,21 @@ body {
   /* background-color:green; */
 }
 
-#application-download-charts {
+.application-download-charts {
   width: 10.6rem;
   margin: 0 auto;
-  /* background-color: red; */
+  background-color: red;
+  position: relative;
 }
+/* .index-logo{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  z-index: 99999999;
+  background-color: red;
+} */
 
 
 /* 2.设备盒子 */
@@ -1003,9 +1021,18 @@ body {
 .facility-s-right {
   width: 3rem;
   height: 1.825rem;
-  background-color: orange;
+  /* background-color: orange; */
 }
-
+.facility-circle{
+  width:1.7rem;
+  height:1.7rem;
+  border-radius: 50%;
+  margin:0.0625rem 1.25rem 0.0625rem 0rem;
+  background-color: red;
+}
+.facility-right .facility-s-right .facility-circle{
+  margin-left: 0.50rem;
+}
 .facility-left .facility1:first-child {
   margin-bottom: 0.7rem;
 }
@@ -1086,8 +1113,8 @@ body {
 }
 
 .user-right-b {
-  width: 71.5%;
-  margin-left: 3.5%;
+  width: 8.1rem;
+  margin-left: 0.3rem;
   height: 2rem;
   background: url(../img/offline-per-bg.png) no-repeat;
   background-size: 100% 100%;
@@ -1120,7 +1147,7 @@ body {
   height: 5.8rem;
 }
 
-.aside-left div div:nth-child(1) {
+.aside-left .duration div:nth-child(1) {
   width: 2.3rem;
 }
 
@@ -1152,33 +1179,59 @@ body {
 }
 
 .user-img {
-  padding: 0 0.6rem;
+  padding: 0.1rem 0.3rem;
 }
 
 .user-per-img {
-  width: 1.1rem;
-  margin: 0 0.3rem;
+  width: 1.05rem;
+  margin: 0 0.4rem;
 }
 .user-name-all{
-  width:7.5rem;
-  margin: 0 auto;
+  padding: 0 0.33rem;
 }
 
 .user-name {
-  /* width: 25%; */
-  text-align: center;
-  padding: 0 0.3rem;
+  margin: 0 0.3rem;
 }
 
 .user-title{
   height: 0.3rem;
   line-height: 0.3rem;
+  width: 1rem;
 }
 
 .user-circle {
   width: 0.16rem;
   height: 0.16rem;
   border-radius: 0.08rem;
-  background-color: red;
-  margin:0.06rem;
+  background-color: #cf2756;
+  margin:0.06rem 0.05rem;
+}
+.user-box-percent{
+  padding: 0.1rem 0.2rem;
+}
+.user-box-percent div{
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+}
+.user-box-percent div:nth-child(1){
+  width: 27.3%;
+  background-color: #cf2756;
+  border-top-left-radius: 0.15rem;
+  border-bottom-left-radius: 0.15rem;
+}
+.user-box-percent div:nth-child(2){
+  width: 26.8%;
+  background-color: #777a83;
+}
+.user-box-percent div:nth-child(3){
+  width: 23.4%;
+  background-color: #666a74;
+}
+.user-box-percent div:nth-child(4){
+  width: 22.5%;
+  background-color: #5b606b;
+  border-top-right-radius: 0.15rem;
+  border-bottom-right-radius: 0.15rem;
 }
