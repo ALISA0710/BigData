@@ -6,12 +6,18 @@ $(document).ready(function () {
 
     var option4 = {
         grid: {
-            top:'5%',
+            top: '5%',
             left: '2%',
             right: '2%',
             bottom: '1%',
             containLabel: true
         },
+
+        tooltip: {
+            // trigger: 'item',
+            formatter: "{c} min"
+        },
+
         xAxis: {
             type: 'category',
             boundaryGap: false,
@@ -128,7 +134,7 @@ $(document).ready(function () {
     };
 
     myChart.setOption(option4);
-    window.addEventListener("resize",function(){
+    window.addEventListener("resize", function () {
         myChart.resize();
     });
 });
