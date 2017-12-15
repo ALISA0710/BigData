@@ -14,7 +14,6 @@ $(document).ready(function () {
                             }
                         },
                         series: [{
-                                name: '访问来源',
                                 type: 'pie',
                                 radius: '100%',
                                 center: ['50%', '50%'],
