@@ -44,8 +44,9 @@ $(document).ready(function () {
             
                             },
             
-                        ]
-                    };;
+                        ],
+                        animation: false
+                    };
     
         myChart.setOption(option2);
         window.addEventListener("resize",function(){

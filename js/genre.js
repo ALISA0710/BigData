@@ -45,8 +45,8 @@ $(document).ready(function () {
                                 }
             
                             },
-            
-                        ]
+                        ],
+                        animation: false
                     };;
     
         myChart.setOption(option2);

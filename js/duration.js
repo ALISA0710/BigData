@@ -12,7 +12,6 @@ $(document).ready(function () {
                             }
                         },
                         series: [{
-                                name: '访问来源',
                                 type: 'pie',
                                 radius: '100%',
                                 center: ['50%', '50%'],
@@ -43,9 +42,9 @@ $(document).ready(function () {
                                 }
             
                             },
-            
-                        ]
-                    };;
+                        ],
+                        animation: false
+                    };
     
         myChart.setOption(option2);
         window.addEventListener("resize",function(){

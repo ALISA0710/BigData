@@ -73,7 +73,7 @@ $(document).ready(function () {
             axisLine: {
                 lineStyle: {
                     color: '#5c6270',
-                    // width: 1, //这里是坐标轴的宽度,可以去掉
+                    width: 1, //这里是坐标轴的宽度,可以去掉
                 }
             }
         },

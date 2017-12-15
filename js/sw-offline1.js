@@ -24,7 +24,8 @@ $(document).ready(function () {
                     show: false
                 }
             }
-        }]
+        }],
+    animation: false
     };
     
     myChart.setOption(option3);
