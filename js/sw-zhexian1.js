@@ -90,6 +90,10 @@ $(document).ready(function () {
                                 {
                                     offset: 0.2,
                                     color: '#453043'
+                                },
+                                {
+                                    offset: 1,
+                                    color: '#453043'
                                 }
                             ]
                         )
