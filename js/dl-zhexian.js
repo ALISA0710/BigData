@@ -23,7 +23,7 @@ $(document).ready(function () {
                     color: '#a6acbc',
                     fontSize: '14'
                 }
-            },
+            },margin:18,
             // 控制网格线是否显示
             splitLine: {
                 show: true,
@@ -67,14 +67,14 @@ $(document).ready(function () {
                 textStyle: {
                     color: '#a6acbc',
                     fontSize: '12'
-                }
+                },margin:18
             },
             // y轴的颜色和宽度
             axisLine: {
                 lineStyle: {
                     color: '#5c6270',
                     width: 1, //这里是坐标轴的宽度,可以去掉
-                }
+                }               
             }
         },
         series: [{
