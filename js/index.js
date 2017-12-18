@@ -1,25 +1,35 @@
 //start!
 $(document).ready(function () {
-    // 影片时间选项卡
-    $("#film-charts-time>div").click(function () {
+    // 时间切换
+    // -----1.day
+    $(".day").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
     });
-    // 地图选项卡
-    $("#film-charts-map>div").click(function () {
+    // -----2.week
+    $(".week").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
     });
-    // top选项
-    // $(".top-continer .top-p").click(function () {
-    //     $(this).css({
-    //         "background-color": "#dd2556",
-    //         "color":" #fff",
-    //         "font-size": "0.22rem"
-    //     }).siblings().css({
-    //         "background-color": "##f0f0f0",
-    //         "color":" #000",
-    //         "font-size": "0.16rem"
-    //     });
-    // });
-    // 
+    
+    // -----3.month
+    $(".month").click(function () {
+        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
+    });
+    // -----4.year    
+    $(".year").click(function () {
+        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
+    });
+     // -----5.country
+     $(".country").click(function () {
+        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
+    });
+    
+    // -----6.city
+    $(".city").click(function () {
+        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
+    });
+    // -----7.company    
+    $(".company").click(function () {
+        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
+    });
 });
 //end!
