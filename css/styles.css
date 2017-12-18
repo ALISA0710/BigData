@@ -871,10 +871,15 @@ body {
   margin: 0.035rem 0.2rem 0.035rem 0.2rem;
 }
 
-.top-p:hover {
+.top-p-click {
   background: #dd2556;
   color: #fff;
   font-size: 0.22rem;
+}
+.top-p-remove {
+  background: #f0f0f0;
+  color: #000;
+  font-size: 0.16rem;
 }
 
 

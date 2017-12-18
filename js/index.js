@@ -31,5 +31,9 @@ $(document).ready(function () {
     $(".company").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
     });
+    // -----8.top-p    
+    $(".top-p").click(function () {
+        $(this).addClass("top-p-click").siblings().hasClass("top-p").addClass("top-p-remove ");
+    });
 });
 //end!
