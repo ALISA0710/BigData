@@ -84,14 +84,15 @@ $(document).ready(function () {
                     normal: {
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1, [{
-                                    offset: 0,
-                                    color: '#d22a5d'
-                                },
-                                {
-                                    offset: 0.2,
-                                    color: '#453043'
-                                }
-                            ]
+                                offset: 0,
+                                color: '#d22a5d'
+                            }, {
+                                offset: 0.3,
+                                color: '#453043'
+                            }, {
+                                offset: 1,
+                                color: '#2a3040'
+                            }]
                         )
                     }
                 },

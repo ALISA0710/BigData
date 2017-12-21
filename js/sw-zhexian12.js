@@ -108,7 +108,7 @@ $(document).ready(function () {
             data: [9268, 9632, 46547, 104332, 136993, 111545, 90897],
             markPoint: {
                 symbol: 'rect',
-                symbolSize: [60, 20],
+                symbolSize: [60, 25],
                 symbolOffset: ['10%', '100%', '0%', '100%'],
                 backgroundColor: '#d22a5d',
                 lineHeight:20,
