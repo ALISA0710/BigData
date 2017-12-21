@@ -4,19 +4,20 @@ $(document).ready(function () {
     var myChart = echarts.init(document.getElementById("sw-zhexian1"));
 
 
+
     var option = {
         grid: {
-            top:'5%',
+            top: '5%',
             left: '0%',
             right: '11%',
             bottom: '5%',
             containLabel: true
         },
-        xAxis: {
+
+        xAxis: [{
             type: 'category',
             boundaryGap: false,
             data: ['SUN', 'MON', 'TUE', 'WEN', 'THR', 'FRI', 'SAT'],
-            // x轴的字体样式
             axisLabel: {
                 show: true,
                 textStyle: {
@@ -41,13 +42,13 @@ $(document).ready(function () {
                     width: 3, //这里是坐标轴的宽度,可以去掉
                 }
             },
-            
+
             // 去除坐标轴上的刻度线
             axisTick: {
-                 show: false
-            }      
-        },
-        yAxis: {
+                show: false
+            }
+        }],
+        yAxis: [{
             type: 'value',
             axisLabel: {
                 formatter: '{value} '
@@ -76,70 +77,83 @@ $(document).ready(function () {
                     width: 1, //这里是坐标轴的宽度,可以去掉
                 }
             }
-        },
+        }],
         series: [{
-                type: 'line',
-                areaStyle: {
-                    // 折线区域渐变
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1, [{
-                                    offset: 0,
-                                    color: '#d22a5d'
-                                },
-                                {
-                                    offset: 0.3,
-                                    color: '#453043'
-                                },
-                                {
-                                    offset: 1,
-                                    color: '#2a3040'
-                                }
-                            ]
-                        )
-                    }
-                },
-                itemStyle: {
-                    normal: {
-                        color: '#fff',
-                        lineStyle: {
-                            // 折线颜色
+            type: 'line',
+            areaStyle: {
+                // 折线区域渐变
+                normal: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
                             color: '#d22a5d'
-                        }
-                    }
-                },
-                data: [9268, 9632, 46547, 104332, 136993, 111545, 90897],
-                // markPoint: {                  
-                    
-                //     data: [{
-                //             type: 'min',
-                //             name: 'value'
-                //         },
-                //         {
-                //             type: 'max',
-                //             name: 'value'
-                //         }
-                //     ]
-                // },
-                label: {
-                    normal: {
-                      
-                        backgroundColor:'#d22a5d',
-                        show: true,
-                        // fontySize:20,
-                        // color:"#fff",
-                        // padding:[50,20],
-                        fontSize:10,
-                        formatter: '{c}'
-                    }
-                },
+                        }, {
+                            offset: 0.3,
+                            color: '#453043'
+                        }, {
+                            offset: 1,
+                            color: '#2a3040'
+                        }]
+                    )
+                }
             },
-
-        ]
+            itemStyle: {
+                normal: {
+                    lineStyle: {
+                        // 折线颜色
+                        color: '#d22a5d'
+                    }
+                }
+            },
+            data: [9268, 9632, 46547, 104332, 136993, 111545, 90897],
+            markPoint: {
+                symbol: 'rect',
+                symbolSize: [60, 20],
+                symbolOffset: ['10%', '100%', '0%', '100%'],
+                backgroundColor: '#d22a5d',
+                lineHeight:20,
+                data: [{
+                    name: '',
+                    value: 9268,
+                    xAxis: 0,
+                    yAxis: 9268
+                }, {
+                    name: '',
+                    value: 9632,
+                    xAxis: 1,
+                    yAxis: 9632
+                }, {
+                    name: '',
+                    value: 46547,
+                    xAxis: 2,
+                    yAxis: 46547
+                }, {
+                    name: '',
+                    value: 104332,
+                    xAxis: 3,
+                    yAxis: 104332
+                }, {
+                    name: '',
+                    value: 136993,
+                    xAxis: 4,
+                    yAxis: 136993
+                }, {
+                    name: '',
+                    value: 111545,
+                    xAxis: 5,
+                    yAxis: 111545
+                }, {
+                    name: '',
+                    value: 90897,
+                    xAxis: 6,
+                    yAxis: 90897
+                }]
+            }
+        }]
     };
 
     myChart.setOption(option);
-    window.addEventListener("resize",function(){
+    window.addEventListener("resize", function () {
         myChart.resize();
     });
 });
