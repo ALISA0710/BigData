@@ -29,7 +29,7 @@ $(document).ready(function () {
     }, {
         value: 20447,
         name: 'Musical'
-    }, ];
+    }, ]
     var rich = {
         white: {
             color: "#fff",
@@ -51,7 +51,7 @@ $(document).ready(function () {
             align: 'center',
              padding: [4, 100]
         }
-    };
+    }
     var option = {
         series: [{
             type: 'pie',
@@ -69,7 +69,7 @@ $(document).ready(function () {
                             total += value.value;
                         });
                         percent = ((params.value / total) * 100).toFixed(1);
-                        return '{black|' + percent + '%}\n{hr|}\n{white|' + params.name + '}\n{gray|' + params.value + '}';
+                    return '{black|'+ percent + '%}\n{hr|}\n{white|'+ params.name + '}\n{gray|' + params.value + '}';
                     },
                     rich: rich,
                 },

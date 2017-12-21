@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     var option = {
         grid: {
-            left: '0%',
+            left: '-1%',
             right: '0%',
             bottom: '0%',
             containLabel: true
@@ -47,7 +47,21 @@ $(document).ready(function () {
         series: [{
                 name: 'MEN',
                 type: 'bar',
-                data: [0, 332, 301, 334, 390, 330, 320],
+                data: ['', 332, 301, 334, 390, 330, 320],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        offset: [40, -20],
+                        formatter: '{c}%',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 20,
+                            fontWeight: 400,
+                        }
+                    },
+
+                },
                 itemStyle: {
                     normal: {
                         color: '#b3b8c6'
@@ -58,7 +72,7 @@ $(document).ready(function () {
                 name: 'WOMEN',
                 type: 'bar',
                 stack: '广告',
-                data: [0, 132, 101, 134, 90, 230, 210],
+                data: ['', 132, 101, 134, 90, 230, 210],
                 itemStyle: {
                     normal: {
                         color: '#dd2457'
