@@ -56,7 +56,7 @@ $(document).ready(function () {
             clockwise: true, //饼图的扇区是否是顺时针排布
             radius: '100%',
             center: ['50%', '50%'], //饼图的中心（圆心）坐标
-            radius: [49, 230], //饼图的半径
+            radius: ['20%', '100%'], //饼图的半径
             hoverAnimation: false,
             color: ['#dd2457', '#6b707e', '#474b57'],
             label: {
@@ -88,7 +88,7 @@ $(document).ready(function () {
             clockwise: true,
             hoverAnimation: false,
             center: ['50%', '50%'], //饼图的中心（圆心）坐标
-            radius: [0, 50], //饼图的半径
+            radius: [0, '30%'], //饼图的半径
             label: { //标签的位置
                 normal: {
                     show: false,
