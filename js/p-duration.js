@@ -23,7 +23,7 @@ $(document).ready(function () {
                 color: "#000",
                 align: 'center',
                 fontSize: 14 * scale,
-                padding: [0, 0]
+                padding: [10, 0]
             },
             white: {
                 color: '#fff',
