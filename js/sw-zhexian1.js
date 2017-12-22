@@ -109,28 +109,9 @@ $(document).ready(function () {
                     }
                 },
                 data: [9268, 9632, 46547, 104332, 136993, 111545, 90897],
-                // markPoint: {                  
-                    
-                //     data: [{
-                //             type: 'min',
-                //             name: 'value'
-                //         },
-                //         {
-                //             type: 'max',
-                //             name: 'value'
-                //         }
-                //     ]
-                // },
                 label: {
                     normal: {
-                      
-                        backgroundColor:'#d22a5d',
                         show: true,
-                        // fontySize:20,
-                        // color:"#fff",
-                        // padding:[50,20],
-                        fontSize:10,
-                        formatter: '{c}'
                     }
                 },
             },
