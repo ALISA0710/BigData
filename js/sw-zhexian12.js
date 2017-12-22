@@ -108,10 +108,28 @@ $(document).ready(function () {
             data: [9268, 9632, 46547, 104332, 136993, 111545, 90897],
             markPoint: {
                 symbol: 'rect',
-                symbolSize: [60, 25],
-                symbolOffset: ['10%', '100%', '0%', '100%'],
-                backgroundColor: '#d22a5d',
-                lineHeight:20,
+                symbolSize: [60, 20],
+                symbolOffset: ['0%', '100%', '50%', '100%'],
+                itemStyle: {
+                    normal: {
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0,
+                                color: '#585c67' // 0% 处的颜色
+                            }, {
+                                offset: 1,
+                                color: '#585c67' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        },
+
+                    },
+                },
                 data: [{
                     name: '',
                     value: 9268,
@@ -147,7 +165,7 @@ $(document).ready(function () {
                     value: 90897,
                     xAxis: 6,
                     yAxis: 90897
-                }]
+                }],
             }
         }]
     };
