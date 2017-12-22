@@ -4,81 +4,101 @@ $(document).ready(function () {
     var myChart = echarts.init(document.getElementById("genre"));
 
 
-    var option2 = {
-        tooltip: {
-            formatter: "{b} : {c} ({d}%)",
-            axisPointer: {
-                type: 'none'
-            }
+    var scale = 1;
+    var echartData = [{
+        value: 26139,
+        name: 'Horror'
+    }, {
+        value: 24838,
+        name: 'Sci-fi'
+    }, {
+        value: 25022,
+        name: 'Travel'
+    }, {
+        value: 23558,
+        name: 'Sport'
+    }, {
+        value: 23009,
+        name: 'Animation'
+    }, {
+        value: 22989,
+        name: 'Documentary'
+    }, {
+        value: 20477,
+        name: 'Art'
+    }, {
+        value: 20447,
+        name: 'Musical'
+    }, ]
+    var rich = {
+        white: {
+            color: "#fff",
+            fontSize: 20 * scale,
+            align: 'center',
         },
+
+        black: {
+            color: "#000",
+            align: 'center',
+            fontSize: 20 * scale,
+
+        },
+        gray: {
+            color: '#d1d2d3',
+            fontSize: 14 * scale,
+            align: 'center',
+             padding: [5,0]
+        }
+    }
+    var option = {
         series: [{
-                type: 'pie',
-                radius: '100%',
-                center: ['50%', '50%'],
-                data: [{
-                        value: 1055,
-                        name: '1'
+            type: 'pie',
+            clockwise: true, //饼图的扇区是否是顺时针排布
+            radius: '100%',
+            center: ['50%', '50%'], //饼图的中心（圆心）坐标
+            radius: [49, 230], //饼图的半径
+            hoverAnimation: false,
+            color: ['#dd2457', '#6b707e', '#474b57'],
+            label: {
+                normal: {
+                    position: 'inner',
+                    formatter: function (params, ticket, callback) {
+                        var total = 0; //总数量
+                        var percent = 0; //占比
+                        echartData.forEach(function (value, index, array) {
+                            total += value.value;
+                        });
+                        percent = ((params.value / total) * 100).toFixed(1);
+                        return '{black|' + percent + '%}\n{hr|}\n{white|' + params.name + '}\n{gray|' + params.value + '}';
                     },
-                    {
-                        value: 310,
-                        name: '2'
-                    },
-                    {
-                        value: 234,
-                        name: '3'
-                    },
-                    {
-                        value: 135,
-                        name: '4'
-                    },
-                    {
-                        value: 248,
-                        name: '5'
-                    },
-                    {
-                        value: 255,
-                        name: '6'
-                    },
-                    {
-                        value: 310,
-                        name: '7'
-                    },
-                    {
-                        value: 234,
-                        name: '8'
-                    },
-                    {
-                        value: 235,
-                        name: '9'
-                    },
-                    {
-                        value: 435,
-                        name: '10'
+                    
+                    rich: rich,
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontWeight: 'bold'
                     }
-                ],
-                color: ['#dd2457', '#6b707e', '#dd2457', '#474b57', '#6b707e', '#dd2457', '#474b57', '#dd2457', '#6b707e', '#474b57'],
-                itemStyle: {
-                    normal: {
-                        label: {
-                            show: true,
-                            position: 'inner',
-                            formatter: '{b}',
-                            fontSize: 30,
-                            color: "#fff"
-                        },
-                        labelLine: {
-                            show: false
-                        }
-                    }
-                }
-
+                },
             },
+            data: echartData
+        },{
+            type: 'pie',
+            radius: '100%',
+            clockwise: true,
+            hoverAnimation: false,
+            center: ['50%', '50%'], //饼图的中心（圆心）坐标
+            radius: [0, 50], //饼图的半径
+            label: { //标签的位置
+                normal: {
+                    show: false,
+                }
+            },
+            data: echartData
+        }]
+    };
 
-        ],
-        animation: false
-    };;
-
-    myChart.setOption(option2);
+    myChart.setOption(option);
     window.addEventListener("resize", function () {
         myChart.resize();
     });

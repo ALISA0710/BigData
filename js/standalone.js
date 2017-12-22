@@ -43,7 +43,6 @@ $(document).ready(function () {
         },
         color: ['#dd2457', '#6b707e', '#dd2457', '#474b57', '#6b707e', '#dd2457', '#474b57', '#dd2457', '#6b707e', '#474b57'],
         series: [{
-            name: '违规次数',
             type: 'pie',
             clockwise: true, //饼图的扇区是否是顺时针排布
             radius: '100%',

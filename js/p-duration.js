@@ -20,10 +20,10 @@ $(document).ready(function () {
                 align: 'center'
             },
             black: {
-                color: "#383a42",
+                color: "#000",
                 align: 'center',
                 fontSize: 14 * scale,
-                padding: [25, 0]
+                padding: [0, 0]
             },
             white: {
                 color: '#fff',
@@ -35,8 +35,10 @@ $(document).ready(function () {
         var option = {
             series: [{
                 type: 'pie',
+                clockwise: true, //饼图的扇区是否是顺时针排布
                 radius: '100%',
-                center: ['50%', '50%'],
+                center: ['50%', '50%'], //饼图的中心（圆心）坐标
+                radius: [18, 120], //饼图的半径
                 hoverAnimation: false,
                 color: ['#dd2457', '#6b707e', '#474b57'],
                 label: {
@@ -56,7 +58,20 @@ $(document).ready(function () {
                     },
                 },
                 data: echartData
-            }]
+            },{
+                type: 'pie',
+                radius: '100%',
+                clockwise: true,
+                hoverAnimation: false,
+                center: ['50%', '50%'], //饼图的中心（圆心）坐标
+                radius: [0, 20], //饼图的半径
+                label: { //标签的位置
+                    normal: {
+                        show: false,
+                    }
+                },
+                data: echartData
+            }],
         };
                       
 
