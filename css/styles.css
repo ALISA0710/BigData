@@ -1108,7 +1108,7 @@ body {
 
 .user-left-a {
   width: 24%;
-  height: 2.5rem;
+  height: 2.2rem;
   text-align: right;
   background: url(../img/total-number-of-users-bg.png) no-repeat;
   background-size: 100% 100%;
@@ -1138,7 +1138,7 @@ body {
 }
 
 .border {
-  border: 1px solid #5f636f;
+  border-bottom: 1px solid #5f636f;
   margin-top: 0.15rem;
   width: 99%;
 }
