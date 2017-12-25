@@ -35,9 +35,8 @@ $(document).ready(function () {
     $(".top-p").click(function () {
         $(this).addClass('choose').siblings().removeClass('choose');
 
-        // console.log($(".circle-pink div").attr("id"));
 
-
+        // 3.people.html----------------------地图切换
         if ($(this).attr('data-id') === "asia") {
             $("#asia").css("display", "block");
             $("#n-america").css("display", "none");
@@ -48,7 +47,7 @@ $(document).ready(function () {
         } else if ($(this).attr('data-id') === "n-america") {
             $("#asia").css("display", "none");
             $("#n-america").css("display", "block");
-            $("#s-america").css("display", "none");
+            $("#s-america").csis("display", "none");
             $("#europe").css("display", "none");
             $("#australia").css("display", "none");
             $("#afirca").css("display", "none");
