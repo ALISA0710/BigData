@@ -4,6 +4,15 @@ $(document).ready(function () {
     // -----1.day
     $(".day").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
+
+        // 1.1film-day
+        if ($(this).attr('id') === "film-day") {
+            $("#sw-zhexian1").css("display", "none");
+           
+        }
+        //  else if ($(this).attr('id') === "film-week") {
+        //     $("#sw-zhexian1").css("display", "none");  
+        // }
     });
     // -----2.week
     $(".week").click(function () {
@@ -34,8 +43,6 @@ $(document).ready(function () {
     // -----8.top-p    
     $(".top-p").click(function () {
         $(this).addClass('choose').siblings().removeClass('choose');
-
-
         // 3.people.html----------------------地图切换
         if ($(this).attr('data-id') === "asia") {
             $("#asia").css("display", "block");
