@@ -8,7 +8,7 @@ $(document).ready(function () {
         // 1.1film-day
         if ($(this).attr('id') === "film-day") {
             $("#sw-zhexian1").css("display", "none");
-           
+
         }
         //  else if ($(this).attr('id') === "film-week") {
         //     $("#sw-zhexian1").css("display", "none");  
@@ -43,7 +43,7 @@ $(document).ready(function () {
     // -----8.top-p    
     $(".top-p").click(function () {
         $(this).addClass('choose').siblings().removeClass('choose');
-        // 3.people.html----------------------地图切换
+        // 8.3people.html----------------------地图切换
         if ($(this).attr('data-id') === "asia") {
             $("#asia").css("display", "block");
             $("#n-america").css("display", "none");
@@ -58,28 +58,28 @@ $(document).ready(function () {
             $("#europe").css("display", "none");
             $("#australia").css("display", "none");
             $("#afirca").css("display", "none");
-        }else if ($(this).attr('data-id') === "s-america") {
+0        } else if ($(this).attr('data-id') === "s-america") {
             $("#asia").css("display", "none");
             $("#n-america").css("display", "none");
             $("#s-america").css("display", "block");
             $("#europe").css("display", "none");
             $("#australia").css("display", "none");
             $("#afirca").css("display", "none");
-        }else if ($(this).attr('data-id') === "europe") {
+        } else if ($(this).attr('data-id') === "europe") {
             $("#asia").css("display", "none");
             $("#n-america").css("display", "none");
             $("#s-america").css("display", "none");
             $("#europe").css("display", "block");
             $("#australia").css("display", "none");
             $("#afirca").css("display", "none");
-        }else if ($(this).attr('data-id') === "australia") {
+        } else if ($(this).attr('data-id') === "australia") {
             $("#asia").css("display", "none");
             $("#n-america").css("display", "none");
             $("#s-america").css("display", "none");
             $("#europe").css("display", "none");
             $("#australia").css("display", "block");
             $("#afirca").css("display", "none");
-        }else if ($(this).attr('data-id') === "afirca") {
+        } else if ($(this).attr('data-id') === "afirca") {
             $("#asia").css("display", "none");
             $("#n-america").css("display", "none");
             $("#s-america").css("display", "none");
