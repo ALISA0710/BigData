@@ -684,7 +684,7 @@ body {
 
 .circle-jo {
   position: absolute;
-  top: 3.7rem;
+  top: 3.3rem;
   left: 4.3rem;
 }
 
@@ -693,7 +693,7 @@ body {
 
 .circle-ri {
   position: absolute;
-  top: 3.8rem;
+  top: 3.3rem;
   left: 2.2rem;
 }
 
@@ -846,7 +846,6 @@ body {
 
 .map-tab {
   height: 4.64rem;
-  /* background: orange; */
   text-align: center;
   margin: 0 0.4rem 0 0.3rem;
 }
