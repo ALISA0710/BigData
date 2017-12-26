@@ -1,10 +1,10 @@
 //start!
 $(document).ready(function () {
 
-    var myChart = echarts.init(document.getElementById("user-right"));
+    var myChart9= echarts.init(document.getElementById("user"));
 
-
-    var option = {
+    // 9.user柱状图
+    var option9= {
         grid: {
             left: '-1%',
             right: '0%',
@@ -84,9 +84,9 @@ $(document).ready(function () {
     };
 
 
-    myChart.setOption(option);
+    myChart9.setOption(option9);
     window.addEventListener("resize", function () {
-        myChart.resize();
+        myChart9.resize();
     });
 });
 //end!

@@ -1,27 +1,29 @@
 //start!
 $(document).ready(function () {
 
-    var myChart = echarts.init(document.getElementById("view"));
+    var myChart1 = echarts.init(document.getElementById("sw-zhexian1"));
+    var myChart2 = echarts.init(document.getElementById("sw-online1"));
+    var myChart3 = echarts.init(document.getElementById("sw-offline1"));
 
-
-    var option = {
+    // 1.sw-zxhexian1折线图
+    var option1 = {
         grid: {
-            top:'5%',
+            top: '5%',
             left: '0%',
-            right: '2%',
+            right: '11%',
             bottom: '5%',
             containLabel: true
         },
         xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: ['0:00', '2:00', '4:00', '6:00', '8:00', '10:00', '12:00','14:00', '16:00', '18:00', '20:00', '22:00', '0:00'],
+            data: ['SUN', 'MON', 'TUE', 'WEN', 'THR', 'FRI', 'SAT'],
             // x轴的字体样式
             axisLabel: {
                 show: true,
                 textStyle: {
                     color: '#a6acbc',
-                    fontSize: '14'
+                    fontSize: '17.6'
                 }
             },
             // 控制网格线是否显示
@@ -44,8 +46,8 @@ $(document).ready(function () {
 
             // 去除坐标轴上的刻度线
             axisTick: {
-                 show: false
-            }      
+                show: false
+            }
         },
         yAxis: {
             type: 'value',
@@ -66,7 +68,7 @@ $(document).ready(function () {
                 show: true,
                 textStyle: {
                     color: '#a6acbc',
-                    fontSize: '12'
+                    fontSize: '10'
                 }
             },
             // y轴的颜色和宽度
@@ -84,15 +86,18 @@ $(document).ready(function () {
                     normal: {
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1, [{
-                                offset: 0,
-                                color: '#d22a5d'
-                            }, {
-                                offset: 0.3,
-                                color: '#453043'
-                            }, {
-                                offset: 1,
-                                color: '#2a3040'
-                            }]
+                                    offset: 0,
+                                    color: '#d22a5d'
+                                },
+                                {
+                                    offset: 0.3,
+                                    color: '#453043'
+                                },
+                                {
+                                    offset: 1,
+                                    color: '#2a3040'
+                                }
+                            ]
                         )
                     }
                 },
@@ -105,31 +110,72 @@ $(document).ready(function () {
                         }
                     }
                 },
-                data: [18324, 6857, 3239, 1964, 2135, 1230, 3855,2457, 3696,18953, 12586, 40669, 22587],
-                markPoint: {
-                    data: [{
-                            type: 'value',
-                            name: 'value'
-                        },
-                        {
-                            type: 'value',
-                            name: 'value'
-                        }
-                    ]
-                },
+                data: [9268, 9632, 46547, 104332, 136993, 111545, 90897],
                 label: {
                     normal: {
-                        show: true
+                        show: true,
                     }
                 },
             },
 
         ]
     };
+    // 2.sw-online1饼图
+    var option2 = {
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            radius: '100%',
+            center: ['50%', '50%'],
+            data: [690, 310],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    // shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color: ['#e02a5b', '#474b57', ],
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            }
+        }],
+        animation: false
+    };
+    // 3.sw-offline1饼图
+    var option3 = {
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            radius: '100%',
+            center: ['50%', '50%'],
+            data: [690, 310],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    // shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color: ['#e02a5b', '#474b57', ],
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            }
+        }],
+        animation: false
+    };
 
-    myChart.setOption(option);
-    window.addEventListener("resize",function(){
-        myChart.resize();
+    myChart1.setOption(option1);
+    myChart2.setOption(option2);
+    myChart3.setOption(option3);
+    window.addEventListener("resize", function () {
+        myChart1.resize();
+        myChart2.resize();
+        myChart3.resize();
     });
 });
 //end!
