@@ -1291,21 +1291,21 @@ body {
   text-align: center;
 }
 
-.user-box-percent div:nth-child(1) {
+.vive-focus-value{
   width: 27.3%;
   border-top-left-radius: 0.15rem;
   border-bottom-left-radius: 0.15rem;
 }
 
-.user-box-percent div:nth-child(2) {
+.gear-vr-value {
   width: 26.8%;
 }
 
-.user-box-percent div:nth-child(3) {
+.htc-vive-value {
   width: 23.4%;
 }
 
-.user-box-percent div:nth-child(4) {
+.oculus-value {
   width: 22.5%;
   border-top-right-radius: 0.15rem;
   border-bottom-right-radius: 0.15rem;

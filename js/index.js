@@ -27,18 +27,40 @@ $(document).ready(function () {
     $(".year").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
     });
-    // -----5.country
-    $(".country").click(function () {
+    // -----5.country---city---company  
+    $("#film-charts-map div").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
-    });
-
-    // -----6.city
-    $(".city").click(function () {
-        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
-    });
-    // -----7.company    
-    $(".company").click(function () {
-        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
+        if ($(this).attr('data-id') === "country") {
+            $("#country1").css("display", "block");
+            $("#city1").css("display", "none");
+            $("#company1").css("display", "none");
+            $("#country2").css("display", "block");
+            $("#city2").css("display", "none");
+            $("#company2").css("display", "none");
+            $("#country3").css("display", "block");
+            $("#city3").css("display", "none");
+            $("#company3").css("display", "none");
+        } else if ($(this).attr('data-id') === "city") {
+            $("#country1").css("display", "none");
+            $("#city1").css("display", "block");
+            $("#company1").css("display", "none");
+            $("#country2").css("display", "none");
+            $("#city2").css("display", "block");
+            $("#company2").css("display", "none");
+            $("#country3").css("display", "none");
+            $("#city3").css("display", "block");
+            $("#company3").css("display", "none");
+        } else if ($(this).attr('data-id') === "company") {
+            $("#country1").css("display", "none");
+            $("#city1").css("display", "none");
+            $("#company1").css("display", "block");
+            $("#country2").css("display", "none");
+            $("#city2").css("display", "none");
+            $("#company2").css("display", "block");
+            $("#country3").css("display", "none");
+            $("#city3").css("display", "none");
+            $("#company3").css("display", "block");
+        }
     });
     // -----8.top-p    
     $(".top-p").click(function () {
@@ -58,7 +80,8 @@ $(document).ready(function () {
             $("#europe").css("display", "none");
             $("#australia").css("display", "none");
             $("#afirca").css("display", "none");
-0        } else if ($(this).attr('data-id') === "s-america") {
+            
+        } else if ($(this).attr('data-id') === "s-america") {
             $("#asia").css("display", "none");
             $("#n-america").css("display", "none");
             $("#s-america").css("display", "block");
