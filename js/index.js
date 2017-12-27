@@ -29,36 +29,71 @@ $(document).ready(function () {
     });
     // -----5.country---city---company 
     // $(function () {
-    //     var index=0;
-    //     var top=$('.circle-data');
+    //     var index1=0;
+    //     var index2=0;
+    //     // 导航栏
+    //     var cona=$('.top-a');
+    //     // 标数据
+    //     var a=$('.cir-a');
 
     //     function run(){
-    //         top.hide();
-    //         top.eq(index).show();
-    //         index=(index+1)%top.length;
+    //         cona.removeClass('choose');
+    //         cona.eq(index1).addClass('choose');
+    //         index1=(index1+1)%cona.length;
+    //         a.hide();
+    //         a.eq(index2).show();
+    //         index2=(index2+1)%a.length;
     //     }
 
     //     run();
     //     setInterval(run,2500);
     // });
     // 第三页------------地图定时切换
-    $(function () {
-        var index1=0;
-        var index2=0;
-        var continent=$('.top-a');
-        var b=$('.cir-b');
 
-        function con(){
-            continent.removeClass('choose');
-            continent.eq(index1).addClass('choose');
-            index1=(index1+1)%continent.length;
-            b.hide();
-            b.eq(index2).show();
-            index2=(index2+1)%b.length;
-        }
-        con();
-        setInterval(con,2500);
-    });
+    var index1 = 0;
+    var index2 = 0;
+
+    var tab = $('.top-b'); // 导航栏   
+    var b = $('.cir-b'); // 标数据
+
+    function RunTab() {
+        tab.removeClass('choose');
+        tab.eq(index1).addClass('choose');
+        index1 = (index1 + 1) % tab.length;
+
+        b.hide();
+        b.eq(index2).show();
+        index2 = (index2 + 1) % b.length;
+    }
+
+    RunTab();
+    setInterval(RunTab, 2500);
+    // 第四页------------宽度占比
+    // $('.vive-focus-value').width('25%');
+    // $('.gear-vr-value').width('35%');
+    // $('.htc-vive-value').width('20%');
+    // $('.oculus-value').width('20%');
+    
+    
+
+    
+    function userWidth() {
+        var _valueA = ['10', '20', '30', '40'];
+        var user = $('.user-box-percent>div');
+        for(var i = 0;i <_valueA.length; i++) {
+            // console.log(content);
+			for(var j = 0; j <user.length; j++) {    
+                user[j].textContent= _valueA[i]+"%";
+                // user[1].textContent= _valueA[1]+"%";
+                // user[2].textContent= _valueA[2]+"%";
+                // user[3].textContent= _valueA[3]+"%";
+                console.log(user[i].width);
+			}
+		}
+    }
+    userWidth();
+
+
 
     $("#film-charts-map div").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
