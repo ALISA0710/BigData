@@ -57,43 +57,30 @@ $(document).ready(function () {
     var b = $('.cir-b'); // 标数据
 
     function RunTab() {
-        tab.removeClass('choose');
-        tab.eq(index1).addClass('choose');
+        tab.removeClass('choose').eq(index1).addClass('choose');
         index1 = (index1 + 1) % tab.length;
 
-        b.hide();
-        b.eq(index2).show();
+        b.hide().eq(index2).show();
         index2 = (index2 + 1) % b.length;
+        var _valueB = ['5569', '333428', '595756', '33234','333428', '595756'];
+        var _nameB = ['.top-AS', '.top-NA', '.top-SA', '.top-EU', '.top-AU', '.top-AF'];
+        for (var i = 0; i < _nameB.length; i++) {
+            $(_nameB[i]).html(_valueB[i]);
+        };
     }
 
     RunTab();
     setInterval(RunTab, 2500);
-    // 第四页------------宽度占比
-    // $('.vive-focus-value').width('25%');
-    // $('.gear-vr-value').width('35%');
-    // $('.htc-vive-value').width('20%');
-    // $('.oculus-value').width('20%');
-    
-    
 
-    
+    // 第四页------------宽度占比
     function userWidth() {
-        var _valueA = ['10', '20', '30', '40'];
-        var user = $('.user-box-percent>div');
-        for(var i = 0;i <_valueA.length; i++) {
-            // console.log(content);
-			for(var j = 0; j <user.length; j++) {    
-                user[j].textContent= _valueA[i]+"%";
-                // user[1].textContent= _valueA[1]+"%";
-                // user[2].textContent= _valueA[2]+"%";
-                // user[3].textContent= _valueA[3]+"%";
-                console.log(user[i].width);
-			}
-		}
+        var _valueA = ['27.3', '26.8', '23.4', '22.5'];
+        var _nameA = ['.vive-focus-value', '.gear-vr-value', '.htc-vive-value', '.oculus-value'];
+        for (var i = 0; i < _nameA.length; i++) {
+            $(_nameA[i]).width(_valueA[i] + '%').html(_valueA[i] + '%');
+        };
     }
     userWidth();
-
-
 
     $("#film-charts-map div").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
