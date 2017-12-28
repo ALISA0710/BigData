@@ -28,32 +28,13 @@ $(document).ready(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
     });
     // -----5.country---city---company 
-    // $(function () {
-    //     var index1=0;
-    //     var index2=0;
-    //     // 导航栏
-    //     var cona=$('.top-a');
-    //     // 标数据
-    //     var a=$('.cir-a');
 
-    //     function run(){
-    //         cona.removeClass('choose');
-    //         cona.eq(index1).addClass('choose');
-    //         index1=(index1+1)%cona.length;
-    //         a.hide();
-    //         a.eq(index2).show();
-    //         index2=(index2+1)%a.length;
-    //     }
-
-    //     run();
-    //     setInterval(run,2500);
-    // });
     // 第三页------------地图定时切换
 
     var index1 = 0;
     var index2 = 0;
 
-    var tab = $('.top-b'); // 导航栏   
+    var tab = $('.top>div'); // 导航栏   
     var b = $('.cir-b'); // 标数据
 
     function RunTab() {
@@ -62,10 +43,11 @@ $(document).ready(function () {
 
         b.hide().eq(index2).show();
         index2 = (index2 + 1) % b.length;
-        var _valueB = ['5569', '333428', '595756', '33234','333428', '595756'];
+
+        var _valueA = ['5569', '333428', '595756', '33234', '333428', '595756'];
         var _nameB = ['.top-AS', '.top-NA', '.top-SA', '.top-EU', '.top-AU', '.top-AF'];
         for (var i = 0; i < _nameB.length; i++) {
-            $(_nameB[i]).html(_valueB[i]);
+            $(_nameB[i]).html(_valueA[i]);
         };
     }
 
@@ -82,31 +64,52 @@ $(document).ready(function () {
     }
     userWidth();
 
-    $("#film-charts-map div").click(function () {
-        $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
-        if ($(this).attr('data-id') === "country") {
-            $(".quality").css("display", "none");
-            $("#country1").css("display", "block");
-            $(".num").css("display", "none");
-            $("#country2").css("display", "block");
-            $(".circle-all").css("display", "none");
-            $("#country3").css("display", "block");
-        } else if ($(this).attr('data-id') === "city") {
-            $(".quality").css("display", "none");
-            $("#city1").css("display", "block");
-            $(".num").css("display", "none");
-            $("#city2").css("display", "block");
-            $(".circle-all").css("display", "none");
-            $("#city3").css("display", "block");
-        } else if ($(this).attr('data-id') === "company") {
-            $(".quality").css("display", "none");
-            $("#company1").css("display", "block");
-            $(".num").css("display", "none");
-            $("#company2").css("display", "block");
-            $(".circle-all").css("display", "none");
-            $("#company3").css("display", "block");
+    // 第一页------------城市选项卡
+    function mapTab() {
+        var _idA = ['#country', '#city', '#company'];
+        var _idB = ['#country1', '#city1', '#company1'];
+        var _idC = ['#country2', '#city2', '#company2'];
+        var _idD = ['#country3', '#city3', '#company3'];
+
+        var getHandler = function (index) {
+            // 这儿出现了一个新的scope
+            return function () {
+                // console.log(index);
+                for (var i = 0; i < _idA.length; i++) {
+                    if (i != index){
+                        $(_idA[i]).css("color", "#ba3a52");
+                        $(_idB[i]).hide();
+                        $(_idC[i]).hide();
+                        $(_idD[i]).hide();
+                    }
+                    else{
+                        $(_idA[i]).css("color", "#fff");
+                        $(_idC[i]).show();
+                        $(_idD[i]).show();
+                        $(_idB[i]).show();
+                    }
+                }
+            };
+        };
+        for (var i = 0; i < _idA.length; i++) {
+            $(_idA[i]).click(getHandler(i));
         }
-    });
+    }
+    mapTab();
+
+    // function setintervalTab() {
+    //     var _cityValue = ['New York', 'Shanghai', 'Beijing', 'Toronto', 'Los Angeles','Los Angeles', 'New York','London', 'Beijing', 'Toronto'];
+    //     var _topName = ['.top0','.top1', '.top2', '.top3', '.top4', '.top5','.top6', '.top7', '.top8', '.top9'];
+    //     for (var i = 0; i < _topName.length; i++) {         
+    //         $(_topName[i]).html(_cityValue[i]);         
+    //     };
+
+    // }
+    // setintervalTab();
+    // setInterval(setintervalTab, 2500);
+
+
+
 
 });
 //end!
