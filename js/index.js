@@ -73,7 +73,7 @@ $(document).ready(function () {
             ['New York3', 'Shanghai', 'Beijing', 'Toronto3', 'Los Angeles', 'Los Angeles', 'New York', 'London3', 'Beijing', 'Toronto']
         ]; // 传参
         var _topName = ['.top0', '.top1', '.top2', '.top3', '.top4', '.top5', '.top6', '.top7', '.top8', '.top9'];
-        var _idD = ['#country3', '#city3', '#company3'];
+        var _idD = ['#mapA', '#mapB', '#mapC'];
         var getHandler = function (index) {
             // 这儿出现了一个新的scope
             return function () {
@@ -109,9 +109,17 @@ $(document).ready(function () {
         index = (index + 1) % top.length;
         cirD.hide().eq(index3).show();
         index3= (index3 + 1) % cirD.length;
+       
     }
     twoValue();
     setInterval(twoValue, 2500);
-
+    $(function(){
+        $("span[class^='topa']").each(function(i) {
+            $(this).html();
+            $(this).attr('class');
+            });
+    
+    });
+    
 });
 //end!
