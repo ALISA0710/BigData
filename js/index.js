@@ -44,7 +44,7 @@ $(document).ready(function () {
         b.hide().eq(index2).show();
         index2 = (index2 + 1) % b.length;
 
-        var _valueA = ['5569', '333428', '595756', '33234', '333428', '595756'];
+        var _valueA = ['5569', '333428', '595756', '33234', '333428', '595756'];// 传参
         var _nameB = ['.top-AS', '.top-NA', '.top-SA', '.top-EU', '.top-AU', '.top-AF'];
         for (var i = 0; i < _nameB.length; i++) {
             $(_nameB[i]).html(_valueA[i]);
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
     // 第四页------------宽度占比
     function userWidth() {
-        var _valueA = ['27.3', '26.8', '23.4', '22.5'];
+        var _valueA = ['27.3', '26.8', '23.4', '22.5'];// 传参
         var _nameA = ['.vive-focus-value', '.gear-vr-value', '.htc-vive-value', '.oculus-value'];
         for (var i = 0; i < _nameA.length; i++) {
             $(_nameA[i]).width(_valueA[i] + '%').html(_valueA[i] + '%');
@@ -65,30 +65,24 @@ $(document).ready(function () {
     userWidth();
 
     // 第一页------------城市选项卡
-    var index=0;
-    var top=$(".topa");
     function mapTab() {
         var _idA = ['#country', '#city', '#company'];
         var _cityValue = [
             ['New York1', 'Shanghai', 'Beijing', 'Toronto1', 'Los Angeles', 'Los Angeles', 'New York', 'London1', 'Beijing', 'Toronto'],
             ['New York2', 'Shanghai', 'Beijing', 'Toronto2', 'Los Angeles', 'Los Angeles', 'New York', 'London2', 'Beijing', 'Toronto'],
             ['New York3', 'Shanghai', 'Beijing', 'Toronto3', 'Los Angeles', 'Los Angeles', 'New York', 'London3', 'Beijing', 'Toronto']
-        ];// 传参
+        ]; // 传参
         var _topName = ['.top0', '.top1', '.top2', '.top3', '.top4', '.top5', '.top6', '.top7', '.top8', '.top9'];
         var _idD = ['#country3', '#city3', '#company3'];
-
-        top.removeClass('choose').eq(index).addClass('choose');       
-        index = (index + 1) % top.length;
-
         var getHandler = function (index) {
             // 这儿出现了一个新的scope
             return function () {
                 // console.log(index);
                 for (var i = 0; i < _idA.length; i++) {
                     // console.log(index);
-                    for (var j = 0; j< _topName.length; j++) {
+                    for (var j = 0; j < _topName.length; j++) {
                         if (i != index) {
-                            $(_idA[i]).css("color", "#ba3a52");                         
+                            $(_idA[i]).css("color", "#ba3a52");
                             $(_idD[i]).hide();
                         } else {
                             $(_idA[i]).css("color", "#fff");
@@ -104,10 +98,20 @@ $(document).ready(function () {
         }
     }
     mapTab();
-    setInterval(mapTab, 2500);
+    // 排行定时切换
+    var index = 0;
+    var top = $(".topa");
+    var index3 = 0;
+    var cirD = $(".circle-data");
 
-
-
+    function twoValue() {
+        top.removeClass('choose').eq(index).addClass('choose');
+        index = (index + 1) % top.length;
+        cirD.hide().eq(index3).show();
+        index3= (index3 + 1) % cirD.length;
+    }
+    twoValue();
+    setInterval(twoValue, 2500);
 
 });
 //end!
