@@ -65,28 +65,36 @@ $(document).ready(function () {
     userWidth();
 
     // 第一页------------城市选项卡
+    var index=0;
+    var top=$(".topa");
     function mapTab() {
         var _idA = ['#country', '#city', '#company'];
-        var _idB = ['#country1', '#city1', '#company1'];
-        var _idC = ['#country2', '#city2', '#company2'];
+        var _cityValue = [
+            ['New York1', 'Shanghai', 'Beijing', 'Toronto1', 'Los Angeles', 'Los Angeles', 'New York', 'London1', 'Beijing', 'Toronto'],
+            ['New York2', 'Shanghai', 'Beijing', 'Toronto2', 'Los Angeles', 'Los Angeles', 'New York', 'London2', 'Beijing', 'Toronto'],
+            ['New York3', 'Shanghai', 'Beijing', 'Toronto3', 'Los Angeles', 'Los Angeles', 'New York', 'London3', 'Beijing', 'Toronto']
+        ];// 传参
+        var _topName = ['.top0', '.top1', '.top2', '.top3', '.top4', '.top5', '.top6', '.top7', '.top8', '.top9'];
         var _idD = ['#country3', '#city3', '#company3'];
+
+        top.removeClass('choose').eq(index).addClass('choose');       
+        index = (index + 1) % top.length;
 
         var getHandler = function (index) {
             // 这儿出现了一个新的scope
             return function () {
                 // console.log(index);
                 for (var i = 0; i < _idA.length; i++) {
-                    if (i != index){
-                        $(_idA[i]).css("color", "#ba3a52");
-                        $(_idB[i]).hide();
-                        $(_idC[i]).hide();
-                        $(_idD[i]).hide();
-                    }
-                    else{
-                        $(_idA[i]).css("color", "#fff");
-                        $(_idC[i]).show();
-                        $(_idD[i]).show();
-                        $(_idB[i]).show();
+                    // console.log(index);
+                    for (var j = 0; j< _topName.length; j++) {
+                        if (i != index) {
+                            $(_idA[i]).css("color", "#ba3a52");                         
+                            $(_idD[i]).hide();
+                        } else {
+                            $(_idA[i]).css("color", "#fff");
+                            $(_topName[j]).html(_cityValue[i][j]);
+                            $(_idD[i]).show();
+                        }
                     }
                 }
             };
@@ -96,17 +104,7 @@ $(document).ready(function () {
         }
     }
     mapTab();
-
-    // function setintervalTab() {
-    //     var _cityValue = ['New York', 'Shanghai', 'Beijing', 'Toronto', 'Los Angeles','Los Angeles', 'New York','London', 'Beijing', 'Toronto'];
-    //     var _topName = ['.top0','.top1', '.top2', '.top3', '.top4', '.top5','.top6', '.top7', '.top8', '.top9'];
-    //     for (var i = 0; i < _topName.length; i++) {         
-    //         $(_topName[i]).html(_cityValue[i]);         
-    //     };
-
-    // }
-    // setintervalTab();
-    // setInterval(setintervalTab, 2500);
+    setInterval(mapTab, 2500);
 
 
 
