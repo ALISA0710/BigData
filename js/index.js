@@ -6,10 +6,10 @@ $(document).ready(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
 
         // 1.1film-day
-        if ($(this).attr('id') === "film-day") {
-            $("#sw-zhexian1").css("display", "none");
+        // if ($(this).attr('id') === "film-day") {
+        //     $("#sw-zhexian1").css("display", "none");
 
-        }
+        // }
         //  else if ($(this).attr('id') === "film-week") {
         //     $("#sw-zhexian1").css("display", "none");  
         // }
