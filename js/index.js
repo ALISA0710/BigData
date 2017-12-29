@@ -28,7 +28,8 @@ $(document).ready(function () {
             ['New York2', 'Shanghai', 'Beijing', 'Toronto2', 'Los Angeles', 'Los Angeles', 'New York', 'London2', 'Beijing', 'Toronto'],
             ['New York3', 'Shanghai', 'Beijing', 'Toronto3', 'Los Angeles', 'Los Angeles', 'New York', 'London3', 'Beijing', 'Toronto']
         ]; // 传参
-        var _topName = ['.top0', '.top1', '.top2', '.top3', '.top4', '.top5', '.top6', '.top7', '.top8', '.top9'];
+
+        var _topA = $('.topa'); //排行
         var _idD = ['#mapA', '#mapB', '#mapC'];
         var getHandler = function (index) {
             // 这儿出现了一个新的scope
@@ -36,13 +37,13 @@ $(document).ready(function () {
                 // console.log(index);
                 for (var i = 0; i < _idA.length; i++) {
                     // console.log(index);
-                    for (var j = 0; j < _topName.length; j++) {
+                    for (var j = 0; j < _topA.length; j++) {
                         if (i != index) {
                             $(_idA[i]).css("color", "#ba3a52");
                             $(_idD[i]).hide();
                         } else {
                             $(_idA[i]).css("color", "#fff");
-                            $(_topName[j]).html(_cityValue[i][j]);
+                            _topA.eq(j).html(_cityValue[i][j]);
                             $(_idD[i]).show();
                         }
                     }
@@ -51,6 +52,10 @@ $(document).ready(function () {
         };
         for (var i = 0; i < _idA.length; i++) {
             $(_idA[i]).click(getHandler(i));
+            for (var j = 0; j < _topA.length; j++) {
+                // 默认显示city排行
+            _topA.eq(j).html(_cityValue[1][j]);
+            }
         }
     }
     mapTab();
@@ -58,19 +63,15 @@ $(document).ready(function () {
 
     var index = 0;
     var top = $(".topa");
-    var cirD = $(".circle-name");
-    // 坐标名字
-    var cirE = $(".circle-data");
-    // 坐标块
-    var cirF = $(".top-c");
-    // 坐标数值
+    var cirD = $(".circle-name"); // 坐标名字
+    var cirE = $(".circle-data"); // 坐标块
+    var cirF = $(".top-c"); // 坐标数值
     var cirValueNum = ['5569', '333428', '595756', '33234', '333428', '595756',
-        '5569', '333428', '595756', '33234', '333428', '595756',
-        '5569', '333428', '595756', '33234', '333428', '595756',
-        '5569', '333428', '595756', '33234', '333428', '595756',
-        '5569', '333428', '595756', '33234', '333428', '595756',
-        '5569', '333428', '595756', '33234', '333428', '595756'
-    ]; // 传参
+                       '5569', '333428', '595756', '33234', '333428', '595756',
+                       '5569', '333428', '595756', '33234', '333428', '595756',
+                       '5569', '333428', '595756', '33234', '333428', '595756',
+                       '5569', '333428', '595756', '33234', '333428', '595756',
+                       '5569', '333428', '595756', '33234', '333428', '595756']; // 传参
     function twoValue() {
         var current = top.eq(index);
         top.removeClass('choose').eq(index).addClass('choose');
@@ -79,9 +80,11 @@ $(document).ready(function () {
         for (var i = 0; i < cirD.length; i++) {
             // 判断关联
             if (cirD.eq(i).html() == currentCityName) {
+                cirD.eq(i).addClass('bigBold');
                 cirE.eq(i).show();
                 cirF.eq(i).html(cirValueNum[i]);
             } else {
+                cirD.eq(i).removeClass('bigBold');
                 cirE.eq(i).hide();
             }
         }

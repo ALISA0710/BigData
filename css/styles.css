@@ -1312,3 +1312,10 @@ body {
   border-top-right-radius: 0.15rem;
   border-bottom-right-radius: 0.15rem;
 }
+
+
+
+/* 联动名字效果 */
+.bigBold{
+  font-weight:600;
+}
