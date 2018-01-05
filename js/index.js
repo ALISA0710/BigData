@@ -1,5 +1,6 @@
 //start!
 $(document).ready(function () {
+    $('.counter').countUp();
     // 时间切换
     $(".film-charts-tab div").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
@@ -26,8 +27,8 @@ $(document).ready(function () {
         var pctNum = [
             ['50.89', '35.65'], //百分比
             ['Effective Viewing Rate234', 'Effective Viewing Rate789'],
-            ['3567589', '452665'],
-            ['567889', '33256999'],
+            ['3,567,589', '452,665'],
+            ['567,889', '33,256,999'],
         ];
         for (var i = 0; i < pct.length; i++) {
             // console.log(pct[i]);
@@ -156,7 +157,7 @@ $(document).ready(function () {
         //topTen
         // -----daily-monthly
         var numA = $('.numA');
-        var _numAValue = ['5000000', '600000', '24,564,365', '25,785', '29,564,306', '32323232']; // 传参
+        var _numAValue = ['5,000,000', '600,000', '24,564,365', '25,785', '29,564,306', '32,323,232']; // 传参
         for (var i = 0; i < numA.length; i++) {
             numA.eq(i).html(_numAValue[i]);
         }

@@ -1,10 +1,16 @@
 //start!
 $(document).ready(function () {
 
-    var myChart9= echarts.init(document.getElementById("user"));
+    var myChart9 = echarts.init(document.getElementById("user"));
+    var data90 = ['', 33, 30, 33, 30, 35, 32];
+    for (var i = 0; i < data90.length; i++) {
+        // console.log(data90[i]);
+        var dataPercent = data90[i];
+        console.log(dataPercent);
+    }
 
     // 9.user柱状图
-    var option9= {
+    var option9 = {
         grid: {
             left: '-1%',
             right: '0%',
@@ -53,7 +59,11 @@ $(document).ready(function () {
                         show: true,
                         position: 'top',
                         offset: [40, -20],
-                        formatter: '{c}%',
+                        // formatter: '{c}%',
+                        formatter: function () {
+                            console.log(dataPercent + "%");
+                            return dataPercent + "%";
+                        },
                         textStyle: {
                             color: '#fff',
                             fontSize: 20,

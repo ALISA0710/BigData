@@ -127,15 +127,15 @@
 					<div id="sw-online1" class="chart-circle"></div>
 					<div class="percent">
 						<div class="percent-value fs-32">66.28%</div>
-						<div class="percent-name fs-16">Effective Viewing Rate</div>
+						<div class="percent-name fs-16"></div>
 					</div>
 					<div class="visit">
 						<div class="pink color-pink fs-18">Valid</div>
-						<div class="number color-gray fs-30">36,274,246</div>
+						<div class="number color-gray fs-30 counter">36,274,246</div>
 					</div>
 					<div class="history">
 						<div class="pink color-pink fs-18">Accumulated</div>
-						<div class="number color-gray fs-30">55,383,432</div>
+						<div class="number color-gray fs-30 counter">55,383,432</div>
 					</div>
 				</div>
 				<!-- 4 线下占比 -->
@@ -144,15 +144,15 @@
 					<div id="sw-offline1" class="chart-circle"></div>
 					<div class="percent">
 						<div class="percent-value fs-32">78.55%</div>
-						<div class="percent-name fs-16">Effective Viewing Rate</div>
+						<div class="percent-name fs-16 "></div>
 					</div>
 					<div class="visit">
 						<div class="pink color-pink fs-18">Valid</div>
-						<div class="number color-gray fs-30">35,274,246</div>
+						<div class="number color-gray fs-30 counter">35,274,246</div>
 					</div>
 					<div class="history">
 						<div class="pink color-pink fs-18">Accumulated</div>
-						<div class="number color-gray fs-30">55,383,432</div>
+						<div class="number color-gray fs-30 counter">55,383,432</div>
 					</div>
 				</div>
 			</div>
@@ -561,6 +561,9 @@
 						----3.sw-offline1
 	-->
 	<script src="js/chart1.js"></script>
+	<!--7.数字滚动-->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/jquery.countup.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			var swiper = new Swiper('.swiper-container', {
