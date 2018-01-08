@@ -26,7 +26,7 @@ $(document).ready(function () {
         $(timeName[i]).click(getTimeValue(i));
     }
     setOption10(value10[1]);
-
+    var data11 = ['', 33, 30, 33, 30, 35, 32];
     function setOption10(_dataValue) {
 
         var option10 = {
@@ -206,7 +206,28 @@ $(document).ready(function () {
                         show: true,
                         position: 'top',
                         offset: [40, -20],
-                        formatter: '{c}%',
+                        formatter: function (params) {
+                            switch (params.name) {
+                                case "<15":
+                                    return data11[1] + "%";
+                                    break;
+                                case "15-20":
+                                    return data11[2] + "%";
+                                    break;
+                                case "20-25":
+                                    return data11[3] + "%";
+                                    break;
+                                case "25-30":
+                                    return data11[4] + "%";
+                                    break;
+                                case "30-40":
+                                    return data11[5] + "%";
+                                    break;
+                                case ">40":
+                                    return data11[6] + "%";
+                                    break;
+                            }
+                        },
                         textStyle: {
                             color: '#fff',
                             fontSize: 20,
