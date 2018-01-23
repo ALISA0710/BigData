@@ -168,7 +168,7 @@ $(document).ready(function () {
                                 }
                             }
                         }],
-                        animation: false
+                        // animation: false
                     };
                     // 3.sw-offline1饼图
                     var value3 = [690, 310];
@@ -193,7 +193,7 @@ $(document).ready(function () {
                                 }
                             }
                         }],
-                        animation: false
+                        // animation: false
                     };
 
                     myChart2.setOption(option2);

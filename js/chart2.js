@@ -392,7 +392,7 @@ $(document).ready(function () {
                 },
                 data: _dataValue
             }],
-            animation: false
+            // animation: false
         };
         myChart6.setOption(option6);
         window.addEventListener("resize", function () {
@@ -479,7 +479,7 @@ $(document).ready(function () {
                 },
                 data: data7
             }],
-            animation: false
+            // animation: false
         };
         myChart7.setOption(option7);
         window.addEventListener("resize", function () {
@@ -566,7 +566,7 @@ $(document).ready(function () {
                 },
                 data: data8
             }],
-            animation: false
+            // animation: false
         };
 
         myChart8.setOption(option8);

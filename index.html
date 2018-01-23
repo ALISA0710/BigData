@@ -66,6 +66,15 @@
 </head>
 
 <body>
+	<!-- 加载中。。。。 -->
+	<div class="loading fs-30">
+		<div class="load-img">
+			<img src="img/loading.gif" alt="">
+		</div>
+		<div class="load-title">
+			Loading...
+		</div>
+	</div>
 	<!-- header start! -->
 	<header class="title width-80 color-pink">
 		<img src="img/VRCINEMAlogo.png" alt="">
@@ -369,7 +378,7 @@
 						</div>
 					</div>
 					<div class="circle-name fs-16">Amsterdam</div>
-				</div>				
+				</div>
 				<div class="circle-ch">
 					<div class="circle-pink">
 						<div class="circle-data fs-16">
@@ -531,12 +540,12 @@
 				</div>
 				<div class="topl  width-50">
 					<div class="color-gray fs-22">Top5 in Number</div>
-					<div id="city2 num"  class="">
+					<div id="city2 num" class="">
 						<div class="top-p topa top5"></div>
 						<div class="top-p topa top6"></div>
 						<div class="top-p topa top7"></div>
 						<div class="top-p topa top8"></div>
-						<div class="top-p topa top9"></div>						
+						<div class="top-p topa top9"></div>
 					</div>
 				</div>
 			</div>
@@ -576,6 +585,7 @@
 				// autoplayDisableOnInteraction: false,
 				// autoplay: 2500
 			});
+			$('.counter').countUp();
 		});
 	</script>
 </body>

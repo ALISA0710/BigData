@@ -1,6 +1,5 @@
 //start!
 $(document).ready(function () {
-    $('.counter').countUp();
     // 时间切换
     $(".film-charts-tab div").click(function () {
         $(this).css("color", "#fff").siblings().css("color", "#ba3a52");
@@ -43,14 +42,14 @@ $(document).ready(function () {
                     case 1:
                         $(className[j]).html(pctNum[i][j]); //   执行代码块 1
                         break;
-                    case 2:
+                        // case 2:
                         //   Vaild --------------------切割插取，
                         $(className[j]).html(pctNum[i][j]); //   执行代码块 2
                         break;
-                    case 3:
+                        // case 3:
                         //   History --------------------切割插取，
-                        $(className[j]).html(pctNum[i][j]); //   执行代码块 3
-                        break;                      
+                        // $(className[j]).html(pctNum[i][j]); //   执行代码块 3
+                        // break;                      
                 }
             }
         }
@@ -226,5 +225,8 @@ $(document).ready(function () {
         }
     }
     userWidth();
+
+    // loading......
+    $('.loading').hide();
 });
 //end!
