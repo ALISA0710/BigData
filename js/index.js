@@ -25,9 +25,9 @@ $(document).ready(function () {
         var pct = ['.percent-value', '.percent-name', '.visit>.number', '.history>.number'];
         var pctNum = [
             ['50.89', '35.65'], //百分比
-            ['Effective Viewing Rate234', 'Effective Viewing Rate789'],
-            ['3,567,589', '452,665'],
-            ['567,889', '33,256,999'],
+            ['Effective Viewing Rate234', 'Effective Viewing Rate789'], //注明
+            ['3,567,589', '452,665'], //Vaild
+            ['567,889', '33,256,999'], //Accumulated
         ];
         for (var i = 0; i < pct.length; i++) {
             // console.log(pct[i]);
@@ -37,19 +37,21 @@ $(document).ready(function () {
                 // console.log(className[j]);
                 switch (i) {
                     case 0:
+                        //   百分比 --------------------切割插取，                    
                         $(className[j]).html(pctNum[i][j] + '%'); //   执行代码块 0
                         break;
                     case 1:
+                        //   注明 --------------------切割插取，                
                         $(className[j]).html(pctNum[i][j]); //   执行代码块 1
                         break;
-                        // case 2:
+                    case 2:
                         //   Vaild --------------------切割插取，
                         $(className[j]).html(pctNum[i][j]); //   执行代码块 2
                         break;
-                        // case 3:
-                        //   History --------------------切割插取，
-                        // $(className[j]).html(pctNum[i][j]); //   执行代码块 3
-                        // break;                      
+                    case 3:
+                        //   Accumulated --------------------切割插取，
+                        $(className[j]).html(pctNum[i][j]); //   执行代码块 3
+                        break;
                 }
             }
         }
@@ -73,7 +75,7 @@ $(document).ready(function () {
                 for (var i = 0; i < _idA.length; i++) {
                     // console.log(index);
                     for (var j = 0; j < _topA.length; j++) {
-                        if (i != index) {
+                        if (i !== index) {
                             $(_idA[i]).css("color", "#ba3a52");
                             $(_idD[i]).hide();
                         } else {
@@ -115,7 +117,7 @@ $(document).ready(function () {
         var currentCityName = current.html();
         for (var i = 0; i < cirD.length; i++) {
             // 判断关联
-            if (cirD.eq(i).html() == currentCityName) {
+            if (cirD.eq(i).html() === currentCityName) {
                 cirD.eq(i).addClass('bigBold');
                 cirE.eq(i).show();
                 cirF.eq(i).html(cirValueNum[i]);
@@ -126,7 +128,7 @@ $(document).ready(function () {
         }
     }
     twoValue();
-    setInterval(twoValue, 2500);
+    window.setInterval(twoValue, 2500);
 
     // 第二页------------
     function downLoad() {
@@ -165,11 +167,11 @@ $(document).ready(function () {
         var _totalValue = [
             ['New York1', 'Shanghai', 'Beijing', 'Toronto1', 'Los Angeles', 'Los Angeles', 'New York', 'London1', 'Beijing', 'Toronto'],
             ['New York2', 'Shanghai', 'Beijing', 'Toronto2', 'Los Angeles', 'Los Angeles', 'New York', 'London2', 'Beijing', 'Toronto'],
-            ['New York3', 'Shanghai', 'Beijing', 'Toronto3', 'Los Angeles', 'Los Angeles', 'New York', 'London3', 'Beijing', 'Toronto']
+            ['New York3', 'Shanghai', 'Beijing', 'Toronto3', 'Los Angeles', 'Los Angeles', 'New York', 'London3', 'Beijing', 'Toronto'],
         ]; // 传参
         for (var i = 0; i < _totalValue.length; i++) {
             for (var j = 0; j < _totalValue[i].length; j++) {
-                total.eq(i).children().eq(j).html(j + 1 + " " + _totalValue[i][j]);
+                total.eq(i).children().eq(j).html(j + 1 + " "+ _totalValue[i][j]);
             }
         }
     }
@@ -193,11 +195,12 @@ $(document).ready(function () {
         var _nameB = ['.top-AS', '.top-NA', '.top-SA', '.top-EU', '.top-AU', '.top-AF'];
         for (var i = 0; i < _nameB.length; i++) {
             $(_nameB[i]).html(_valueA[i]);
-        };
+        }
     }
 
     RunTab();
-    setInterval(RunTab, 2500);
+    
+    window.setInterval(RunTab, 2500);
     // 第三页------------total number of users
     function numB() {
         // daily-monthly
